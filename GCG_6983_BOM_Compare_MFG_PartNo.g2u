@@ -1,0 +1,2566 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.fOptions..Create(BaseForm)
+Gui.fOptions..Caption("BOM Compare Options")
+Gui.fOptions..Size(3735,6030)
+Gui.fOptions..MinX(0)
+Gui.fOptions..MinY(0)
+Gui.fOptions..Position(0,0)
+Gui.fOptions..BackColor(-2147483633)
+Gui.fOptions..MaxButton(False)
+Gui.fOptions..MousePointer(0)
+Gui.fOptions..Sizeable(False)
+Gui.fOptions..Event(UnLoad,fOptions_UnLoad)
+Gui.fOptions..AlwaysOnTop(True)
+Gui.fOptions..MinButton(False)
+Gui.fOptions..FontName("Tahoma")
+Gui.fOptions..FontSize(8.25)
+Gui.fOptions..ControlBox(True)
+Gui.fOptions..Moveable(True)
+Gui.fOptions..ShowInTaskBar(True)
+Gui.fOptions..TitleBar(True)
+Gui.fOptions.tabMain.Create(Tab)
+Gui.fOptions.tabMain.Size(3540,4740)
+Gui.fOptions.tabMain.Position(105,105)
+Gui.fOptions.tabMain.Enabled(True)
+Gui.fOptions.tabMain.Visible(True)
+Gui.fOptions.tabMain.Zorder(0)
+Gui.fOptions.tabMain.FontName("Tahoma")
+Gui.fOptions.tabMain.FontSize(8.25)
+Gui.fOptions.tabMain.Tabs(3)
+Gui.fOptions.tabMain.SetTab(0)
+Gui.fOptions.tabMain.Caption("Pre-Load")
+Gui.fOptions.tabMain.SetTab(1)
+Gui.fOptions.tabMain.Caption("Pre-Upload")
+Gui.fOptions.tabMain.SetTab(2)
+Gui.fOptions.tabMain.Caption("Post-Upload")
+Gui.fOptions.chkPostUpload.Create(CheckBox)
+Gui.fOptions.chkPostUpload.Size(1560,300)
+Gui.fOptions.chkPostUpload.Position(105,105)
+Gui.fOptions.chkPostUpload.Parent("tabMain",2)
+Gui.fOptions.chkPostUpload.Caption("Post Upload")
+Gui.fOptions.chkPostUpload.Event(Click,chkPostUpload_Click)
+Gui.fOptions.chkPostUpload.Enabled(True)
+Gui.fOptions.chkPostUpload.Visible(True)
+Gui.fOptions.chkPostUpload.Zorder(0)
+Gui.fOptions.chkPostUpload.FontName("Tahoma")
+Gui.fOptions.chkPostUpload.FontSize(8.25)
+Gui.fOptions.frmPreLoad.Create(Frame)
+Gui.fOptions.frmPreLoad.Size(2865,3825)
+Gui.fOptions.frmPreLoad.Position(105,495)
+Gui.fOptions.frmPreLoad.Parent("tabMain",0)
+Gui.fOptions.frmPreLoad.Enabled(True)
+Gui.fOptions.frmPreLoad.Visible(True)
+Gui.fOptions.frmPreLoad.Zorder(0)
+Gui.fOptions.frmPreLoad.Caption("")
+Gui.fOptions.frmPreLoad.FontName("Tahoma")
+Gui.fOptions.frmPreLoad.FontSize(8.25)
+Gui.fOptions.chkUpdatePreview.Create(CheckBox)
+Gui.fOptions.chkUpdatePreview.Size(1560,300)
+Gui.fOptions.chkUpdatePreview.Position(105,1695)
+Gui.fOptions.chkUpdatePreview.Parent("frmPreLoad")
+Gui.fOptions.chkUpdatePreview.Caption("Update Preview")
+Gui.fOptions.chkUpdatePreview.Event(Click,chkUpdatePreview_Click)
+Gui.fOptions.chkUpdatePreview.Enabled(True)
+Gui.fOptions.chkUpdatePreview.Visible(True)
+Gui.fOptions.chkUpdatePreview.Zorder(0)
+Gui.fOptions.chkUpdatePreview.FontName("Tahoma")
+Gui.fOptions.chkUpdatePreview.FontSize(8.25)
+Gui.fOptions.frmUpdatePreview.Create(Frame)
+Gui.fOptions.frmUpdatePreview.Size(2610,1605)
+Gui.fOptions.frmUpdatePreview.Position(105,2085)
+Gui.fOptions.frmUpdatePreview.Parent("frmPreLoad")
+Gui.fOptions.frmUpdatePreview.Enabled(True)
+Gui.fOptions.frmUpdatePreview.Visible(True)
+Gui.fOptions.frmUpdatePreview.Zorder(0)
+Gui.fOptions.frmUpdatePreview.Caption("")
+Gui.fOptions.frmUpdatePreview.FontName("Tahoma")
+Gui.fOptions.frmUpdatePreview.FontSize(8.25)
+Gui.fOptions.chkPreviewPL.Create(CheckBox)
+Gui.fOptions.chkPreviewPL.Size(1560,300)
+Gui.fOptions.chkPreviewPL.Position(105,855)
+Gui.fOptions.chkPreviewPL.Parent("frmUpdatePreview")
+Gui.fOptions.chkPreviewPL.Caption("Product Line")
+Gui.fOptions.chkPreviewPL.Event(Click,chkPreviewPL_Click)
+Gui.fOptions.chkPreviewPL.Enabled(True)
+Gui.fOptions.chkPreviewPL.Visible(True)
+Gui.fOptions.chkPreviewPL.Zorder(0)
+Gui.fOptions.chkPreviewPL.FontName("Tahoma")
+Gui.fOptions.chkPreviewPL.FontSize(8.25)
+Gui.fOptions.chkPreviewSC.Create(CheckBox)
+Gui.fOptions.chkPreviewSC.Size(1560,300)
+Gui.fOptions.chkPreviewSC.Position(105,1200)
+Gui.fOptions.chkPreviewSC.Parent("frmUpdatePreview")
+Gui.fOptions.chkPreviewSC.Caption("Sort Code")
+Gui.fOptions.chkPreviewSC.Event(Click,chkPreviewSC_Click)
+Gui.fOptions.chkPreviewSC.Enabled(True)
+Gui.fOptions.chkPreviewSC.Visible(True)
+Gui.fOptions.chkPreviewSC.Zorder(0)
+Gui.fOptions.chkPreviewSC.FontName("Tahoma")
+Gui.fOptions.chkPreviewSC.FontSize(8.25)
+Gui.fOptions.chkPreviewDesc.Create(CheckBox)
+Gui.fOptions.chkPreviewDesc.Size(1560,300)
+Gui.fOptions.chkPreviewDesc.Position(105,150)
+Gui.fOptions.chkPreviewDesc.Parent("frmUpdatePreview")
+Gui.fOptions.chkPreviewDesc.Caption("Description")
+Gui.fOptions.chkPreviewDesc.Event(Click,chkPreviewDesc_Click)
+Gui.fOptions.chkPreviewDesc.Enabled(True)
+Gui.fOptions.chkPreviewDesc.Visible(True)
+Gui.fOptions.chkPreviewDesc.Zorder(0)
+Gui.fOptions.chkPreviewDesc.FontName("Tahoma")
+Gui.fOptions.chkPreviewDesc.FontSize(8.25)
+Gui.fOptions.chkPreviewSource.Create(CheckBox)
+Gui.fOptions.chkPreviewSource.Size(1560,300)
+Gui.fOptions.chkPreviewSource.Position(105,495)
+Gui.fOptions.chkPreviewSource.Parent("frmUpdatePreview")
+Gui.fOptions.chkPreviewSource.Caption("Source")
+Gui.fOptions.chkPreviewSource.Event(Click,chkPreviewSource_Click)
+Gui.fOptions.chkPreviewSource.Enabled(True)
+Gui.fOptions.chkPreviewSource.Visible(True)
+Gui.fOptions.chkPreviewSource.Zorder(0)
+Gui.fOptions.chkPreviewSource.FontName("Tahoma")
+Gui.fOptions.chkPreviewSource.FontSize(8.25)
+Gui.fOptions.chkDefaultSource.Create(CheckBox)
+Gui.fOptions.chkDefaultSource.Size(1560,300)
+Gui.fOptions.chkDefaultSource.Position(105,150)
+Gui.fOptions.chkDefaultSource.Parent("frmPreLoad")
+Gui.fOptions.chkDefaultSource.Caption("Default Source")
+Gui.fOptions.chkDefaultSource.Event(Click,chkDefaultSource_Click)
+Gui.fOptions.chkDefaultSource.Enabled(True)
+Gui.fOptions.chkDefaultSource.Visible(True)
+Gui.fOptions.chkDefaultSource.Zorder(0)
+Gui.fOptions.chkDefaultSource.FontName("Tahoma")
+Gui.fOptions.chkDefaultSource.FontSize(8.25)
+Gui.fOptions.frmDefaultSource.Create(Frame)
+Gui.fOptions.frmDefaultSource.Size(2610,1110)
+Gui.fOptions.frmDefaultSource.Position(105,495)
+Gui.fOptions.frmDefaultSource.Parent("frmPreLoad")
+Gui.fOptions.frmDefaultSource.Enabled(True)
+Gui.fOptions.frmDefaultSource.Visible(True)
+Gui.fOptions.frmDefaultSource.Zorder(0)
+Gui.fOptions.frmDefaultSource.Caption("")
+Gui.fOptions.frmDefaultSource.FontName("Tahoma")
+Gui.fOptions.frmDefaultSource.FontSize(8.25)
+Gui.fOptions.lblDefaultPur.Create(Label,"Source for Children",True,1590,255,0,150,690,True,0,"Arial",8,-2147483633,0)
+Gui.fOptions.lblDefaultPur.Parent("frmDefaultSource")
+Gui.fOptions.lblDefaultPur.BorderStyle(0)
+Gui.fOptions.cboDefaultPur.Create(ComboBox)
+Gui.fOptions.cboDefaultPur.Size(630,330)
+Gui.fOptions.cboDefaultPur.Position(1800,600)
+Gui.fOptions.cboDefaultPur.Parent("frmDefaultSource")
+Gui.fOptions.cboDefaultPur.Event(Click,cboDefaultPur_Click)
+Gui.fOptions.cboDefaultPur.Enabled(True)
+Gui.fOptions.cboDefaultPur.Visible(True)
+Gui.fOptions.cboDefaultPur.Zorder(0)
+Gui.fOptions.cboDefaultPur.FontName("Tahoma")
+Gui.fOptions.cboDefaultPur.FontSize(8.25)
+Gui.fOptions.lblDefaultMFG.Create(Label,"Source for Parents",True,1485,255,0,150,300,True,0,"Arial",8,-2147483633,0)
+Gui.fOptions.lblDefaultMFG.Parent("frmDefaultSource")
+Gui.fOptions.lblDefaultMFG.BorderStyle(0)
+Gui.fOptions.cboDefaultMFG.Create(ComboBox)
+Gui.fOptions.cboDefaultMFG.Size(630,330)
+Gui.fOptions.cboDefaultMFG.Position(1800,195)
+Gui.fOptions.cboDefaultMFG.Parent("frmDefaultSource")
+Gui.fOptions.cboDefaultMFG.Event(Click,cboDefaultMFG_Click)
+Gui.fOptions.cboDefaultMFG.Enabled(True)
+Gui.fOptions.cboDefaultMFG.Visible(True)
+Gui.fOptions.cboDefaultMFG.Zorder(0)
+Gui.fOptions.cboDefaultMFG.FontName("Tahoma")
+Gui.fOptions.cboDefaultMFG.FontSize(8.25)
+Gui.fOptions.chkPreLoad.Create(CheckBox)
+Gui.fOptions.chkPreLoad.Size(1560,300)
+Gui.fOptions.chkPreLoad.Position(105,105)
+Gui.fOptions.chkPreLoad.Caption("Pre-Load")
+Gui.fOptions.chkPreLoad.Parent("tabMain",0)
+Gui.fOptions.chkPreLoad.Event(Click,chkPreLoad_Click)
+Gui.fOptions.chkPreLoad.Enabled(True)
+Gui.fOptions.chkPreLoad.Visible(True)
+Gui.fOptions.chkPreLoad.Zorder(0)
+Gui.fOptions.chkPreLoad.FontName("Tahoma")
+Gui.fOptions.chkPreLoad.FontSize(8.25)
+Gui.fOptions.frmPreUpload.Create(Frame)
+Gui.fOptions.frmPreUpload.Size(2865,570)
+Gui.fOptions.frmPreUpload.Position(105,495)
+Gui.fOptions.frmPreUpload.Parent("tabMain",1)
+Gui.fOptions.frmPreUpload.Enabled(True)
+Gui.fOptions.frmPreUpload.Visible(True)
+Gui.fOptions.frmPreUpload.Zorder(0)
+Gui.fOptions.frmPreUpload.Caption("")
+Gui.fOptions.frmPreUpload.FontName("Tahoma")
+Gui.fOptions.frmPreUpload.FontSize(8.25)
+Gui.fOptions.chkCpyRtr.Create(CheckBox)
+Gui.fOptions.chkCpyRtr.Size(2580,300)
+Gui.fOptions.chkCpyRtr.Position(105,150)
+Gui.fOptions.chkCpyRtr.Parent("frmPreUpload")
+Gui.fOptions.chkCpyRtr.Caption("Copy Template Router")
+Gui.fOptions.chkCpyRtr.Event(Click,chkCpyRtr_Click)
+Gui.fOptions.chkCpyRtr.Enabled(True)
+Gui.fOptions.chkCpyRtr.Visible(True)
+Gui.fOptions.chkCpyRtr.Zorder(0)
+Gui.fOptions.chkCpyRtr.FontName("Tahoma")
+Gui.fOptions.chkCpyRtr.FontSize(8.25)
+Gui.fOptions.chkPreUpload.Create(CheckBox)
+Gui.fOptions.chkPreUpload.Size(1560,300)
+Gui.fOptions.chkPreUpload.Position(105,105)
+Gui.fOptions.chkPreUpload.Parent("tabMain",1)
+Gui.fOptions.chkPreUpload.Caption("Pre-Upload")
+Gui.fOptions.chkPreUpload.Event(Click,chkPreUpload_Click)
+Gui.fOptions.chkPreUpload.Enabled(True)
+Gui.fOptions.chkPreUpload.Visible(True)
+Gui.fOptions.chkPreUpload.Zorder(0)
+Gui.fOptions.chkPreUpload.FontName("Tahoma")
+Gui.fOptions.chkPreUpload.FontSize(8.25)
+Gui.fOptions.frmPostUpload.Create(Frame)
+Gui.fOptions.frmPostUpload.Size(3330,3720)
+Gui.fOptions.frmPostUpload.Position(105,495)
+Gui.fOptions.frmPostUpload.Parent("tabMain",2)
+Gui.fOptions.frmPostUpload.Enabled(True)
+Gui.fOptions.frmPostUpload.Visible(True)
+Gui.fOptions.frmPostUpload.Zorder(0)
+Gui.fOptions.frmPostUpload.Caption("")
+Gui.fOptions.frmPostUpload.FontName("Tahoma")
+Gui.fOptions.frmPostUpload.FontSize(8.25)
+Gui.fOptions.chkXrefVen.Create(CheckBox)
+Gui.fOptions.chkXrefVen.Size(2580,300)
+Gui.fOptions.chkXrefVen.Position(105,150)
+Gui.fOptions.chkXrefVen.Parent("frmPostUpload")
+Gui.fOptions.chkXrefVen.Caption("Vendor Cross Reference")
+Gui.fOptions.chkXrefVen.Event(Click,chkXrefVen_Click)
+Gui.fOptions.chkXrefVen.Enabled(True)
+Gui.fOptions.chkXrefVen.Visible(True)
+Gui.fOptions.chkXrefVen.Zorder(0)
+Gui.fOptions.chkXrefVen.FontName("Tahoma")
+Gui.fOptions.chkXrefVen.FontSize(8.25)
+Gui.fOptions.chkMfgPartAppr.Create(CheckBox)
+Gui.fOptions.chkMfgPartAppr.Enabled(True)
+Gui.fOptions.chkMfgPartAppr.Visible(True)
+Gui.fOptions.chkMfgPartAppr.Zorder(0)
+Gui.fOptions.chkMfgPartAppr.Size(3120,300)
+Gui.fOptions.chkMfgPartAppr.Position(105,2985)
+Gui.fOptions.chkMfgPartAppr.Caption("Mfg Part Approved/Preferred")
+Gui.fOptions.chkMfgPartAppr.FontName("Tahoma")
+Gui.fOptions.chkMfgPartAppr.FontSize(8.25)
+Gui.fOptions.chkMfgPartAppr.Parent("frmPostUpload")
+Gui.fOptions.chkBOMComments.Create(CheckBox)
+Gui.fOptions.chkBOMComments.Size(2580,300)
+Gui.fOptions.chkBOMComments.Position(105,2640)
+Gui.fOptions.chkBOMComments.Parent("frmPostUpload")
+Gui.fOptions.chkBOMComments.Caption("BOM Seq Comments")
+Gui.fOptions.chkBOMComments.Enabled(True)
+Gui.fOptions.chkBOMComments.Visible(True)
+Gui.fOptions.chkBOMComments.Zorder(0)
+Gui.fOptions.chkBOMComments.FontName("Tahoma")
+Gui.fOptions.chkBOMComments.FontSize(8.25)
+Gui.fOptions.chkVendorSort.Create(CheckBox)
+Gui.fOptions.chkVendorSort.Size(2580,300)
+Gui.fOptions.chkVendorSort.Position(105,2295)
+Gui.fOptions.chkVendorSort.Parent("frmPostUpload")
+Gui.fOptions.chkVendorSort.Caption("Inv Vendor Sort")
+Gui.fOptions.chkVendorSort.Enabled(True)
+Gui.fOptions.chkVendorSort.Visible(True)
+Gui.fOptions.chkVendorSort.Zorder(0)
+Gui.fOptions.chkVendorSort.FontName("Tahoma")
+Gui.fOptions.chkVendorSort.FontSize(8.25)
+Gui.fOptions.chkDefaultBin.Create(CheckBox)
+Gui.fOptions.chkDefaultBin.Size(2580,300)
+Gui.fOptions.chkDefaultBin.Position(105,1935)
+Gui.fOptions.chkDefaultBin.Parent("frmPostUpload")
+Gui.fOptions.chkDefaultBin.Caption("Default Bin")
+Gui.fOptions.chkDefaultBin.Event(Click,chkDefaultBin_Click)
+Gui.fOptions.chkDefaultBin.Enabled(True)
+Gui.fOptions.chkDefaultBin.Visible(True)
+Gui.fOptions.chkDefaultBin.Zorder(0)
+Gui.fOptions.chkDefaultBin.FontName("Tahoma")
+Gui.fOptions.chkDefaultBin.FontSize(8.25)
+Gui.fOptions.chkRebuildRtrs.Create(CheckBox)
+Gui.fOptions.chkRebuildRtrs.Size(2580,300)
+Gui.fOptions.chkRebuildRtrs.Position(105,1575)
+Gui.fOptions.chkRebuildRtrs.Parent("frmPostUpload")
+Gui.fOptions.chkRebuildRtrs.Caption("Rebuild Routers")
+Gui.fOptions.chkRebuildRtrs.Event(Click,chkRebuildRtrs_Click)
+Gui.fOptions.chkRebuildRtrs.Enabled(True)
+Gui.fOptions.chkRebuildRtrs.Visible(True)
+Gui.fOptions.chkRebuildRtrs.Zorder(0)
+Gui.fOptions.chkRebuildRtrs.FontName("Tahoma")
+Gui.fOptions.chkRebuildRtrs.FontSize(8.25)
+Gui.fOptions.chkBOMComplete.Create(CheckBox)
+Gui.fOptions.chkBOMComplete.Size(2580,300)
+Gui.fOptions.chkBOMComplete.Position(105,1215)
+Gui.fOptions.chkBOMComplete.Parent("frmPostUpload")
+Gui.fOptions.chkBOMComplete.Caption("BOM Complete")
+Gui.fOptions.chkBOMComplete.Event(Click,chkBOMComplete_Click)
+Gui.fOptions.chkBOMComplete.Enabled(True)
+Gui.fOptions.chkBOMComplete.Visible(True)
+Gui.fOptions.chkBOMComplete.Zorder(0)
+Gui.fOptions.chkBOMComplete.FontName("Tahoma")
+Gui.fOptions.chkBOMComplete.FontSize(8.25)
+Gui.fOptions.chkExtraDesc.Create(CheckBox)
+Gui.fOptions.chkExtraDesc.Size(720,300)
+Gui.fOptions.chkExtraDesc.Position(2340,150)
+Gui.fOptions.chkExtraDesc.Parent("frmPostUpload")
+Gui.fOptions.chkExtraDesc.Caption("Extra Description")
+Gui.fOptions.chkExtraDesc.Event(Click,chkExtraDesc_Click)
+Gui.fOptions.chkExtraDesc.Enabled(True)
+Gui.fOptions.chkExtraDesc.Visible(False)
+Gui.fOptions.chkExtraDesc.Zorder(0)
+Gui.fOptions.chkExtraDesc.FontName("Tahoma")
+Gui.fOptions.chkExtraDesc.FontSize(8.25)
+Gui.fOptions.chkAltDesc.Create(CheckBox)
+Gui.fOptions.chkAltDesc.Size(2580,300)
+Gui.fOptions.chkAltDesc.Position(105,855)
+Gui.fOptions.chkAltDesc.Parent("frmPostUpload")
+Gui.fOptions.chkAltDesc.Caption("Alternate Description")
+Gui.fOptions.chkAltDesc.Event(Click,chkAltDesc_Click)
+Gui.fOptions.chkAltDesc.Enabled(True)
+Gui.fOptions.chkAltDesc.Visible(True)
+Gui.fOptions.chkAltDesc.Zorder(0)
+Gui.fOptions.chkAltDesc.FontName("Tahoma")
+Gui.fOptions.chkAltDesc.FontSize(8.25)
+Gui.fOptions.chkXrefCust.Create(CheckBox)
+Gui.fOptions.chkXrefCust.Size(2580,300)
+Gui.fOptions.chkXrefCust.Position(105,495)
+Gui.fOptions.chkXrefCust.Parent("frmPostUpload")
+Gui.fOptions.chkXrefCust.Caption("Customer Cross Reference")
+Gui.fOptions.chkXrefCust.Event(Click,chkXrefCust_Click)
+Gui.fOptions.chkXrefCust.Enabled(True)
+Gui.fOptions.chkXrefCust.Visible(True)
+Gui.fOptions.chkXrefCust.Zorder(0)
+Gui.fOptions.chkXrefCust.FontName("Tahoma")
+Gui.fOptions.chkXrefCust.FontSize(8.25)
+Gui.fOptions.cmdSave.Create(Button)
+Gui.fOptions.cmdSave.Size(1110,375)
+Gui.fOptions.cmdSave.Position(2250,4875)
+Gui.fOptions.cmdSave.Caption("Save")
+Gui.fOptions.cmdSave.Event(Click,cmdSave_Click)
+Gui.fOptions.cmdSave.Enabled(True)
+Gui.fOptions.cmdSave.Visible(True)
+Gui.fOptions.cmdSave.Zorder(0)
+Gui.fOptions.cmdSave.FontName("Tahoma")
+Gui.fOptions.cmdSave.FontSize(8.25)
+Gui.fMain..Create(BaseForm)
+Gui.fMain..Caption("Inventory Update")
+Gui.fMain..Size(13080,7035)
+Gui.fMain..MinX(0)
+Gui.fMain..MinY(0)
+Gui.fMain..Position(0,0)
+Gui.fMain..AlwaysOnTop(True)
+Gui.fMain..BackColor(-2147483633)
+Gui.fMain..ControlBox(False)
+Gui.fMain..MaxButton(False)
+Gui.fMain..MinButton(False)
+Gui.fMain..MousePointer(0)
+Gui.fMain..Sizeable(False)
+Gui.fMain..FontName("Tahoma")
+Gui.fMain..FontSize(8.25)
+Gui.fMain..Moveable(True)
+Gui.fMain..ShowInTaskBar(True)
+Gui.fMain..TitleBar(True)
+Gui.fMain.GsGcMain.Create(GsGridControl)
+Gui.fMain.GsGcMain.Size(12630,5850)
+Gui.fMain.GsGcMain.Position(30,60)
+Gui.fMain.GsGcMain.Enabled(True)
+Gui.fMain.GsGcMain.Visible(True)
+Gui.fMain.GsGcMain.Zorder(0)
+Gui.fMain.cmdProcess.Create(Button)
+Gui.fMain.cmdProcess.Size(1290,375)
+Gui.fMain.cmdProcess.Position(11370,5985)
+Gui.fMain.cmdProcess.Caption("Process")
+Gui.fMain.cmdProcess.Event(Click,cmdProcess_Click)
+Gui.fMain.cmdProcess.Enabled(True)
+Gui.fMain.cmdProcess.Visible(True)
+Gui.fMain.cmdProcess.Zorder(0)
+Gui.fMain.cmdProcess.FontName("Tahoma")
+Gui.fMain.cmdProcess.FontSize(8.25)
+Gui.fMain.cmdSelectAll.Create(Button)
+Gui.fMain.cmdSelectAll.Size(1770,375)
+Gui.fMain.cmdSelectAll.Position(9540,5985)
+Gui.fMain.cmdSelectAll.Caption("Select / Unselect All")
+Gui.fMain.cmdSelectAll.Event(Click,cmdSelectAll_Click)
+Gui.fMain.cmdSelectAll.Enabled(True)
+Gui.fMain.cmdSelectAll.Visible(True)
+Gui.fMain.cmdSelectAll.Zorder(0)
+Gui.fMain.cmdSelectAll.FontName("Tahoma")
+Gui.fMain.cmdSelectAll.FontSize(8.25)
+Gui.fMain.lblSelAll.Create(Label,"False",False,375,195,0,360,6240,True,0,"Tahoma",8.25,,0)
+Gui.fMain.lblSelAll.BorderStyle(0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.bAlt1.Declare
+V.Global.bAlt2.Declare
+V.Global.bExtDesc.Declare
+V.Global.bRouter.Declare
+V.Global.bSel.Declare
+V.Global.bVendor.Declare
+v.Global.bLongPart.Declare
+V.Global.bLongMfgXref.Declare
+
+V.Global.bSel.Set(False)
+v.Global.bSecondRun.Declare
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Programmer: Bryan Pham
+'11/24/2022
+'Customer: DESIGNPRO AUTOMATION
+'Modify part number before upload from BOM Compare
+'Call: DES140-111620220936-0
+
+V.Local.sRet.Declare
+'f.Intrinsic.Control.CallSub(checkTable)
+f.Intrinsic.Control.CallSub(CheckLongPart)
+F.Intrinsic.Control.CallSub(getoptions)
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+
+	F.Intrinsic.Control.Case(50301)
+		'Exit BOM Compare
+		'See if XML file exists
+		V.Local.sFile.Declare
+		f.Intrinsic.String.Build("{0}\BOM_TEMP.xml",v.Caller.TempDir,v.Local.sFile)
+		f.Intrinsic.File.Exists(v.Local.sFile,v.Global.bSecondRun)
+		f.Intrinsic.Control.If(v.Global.bSecondRun,=,True)
+			'Delete if true so that it doesn't think it is a second run
+			F.Intrinsic.File.DeleteFile(v.Local.sFile)
+		f.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case(50310)
+		'Preload Hook
+		'See if the option is active
+		F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 0",V.Local.sRet)
+		F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+			F.Intrinsic.Control.CallSub(preload)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case(50311)
+		'PreUpload Hook
+		'See if the option is active
+		F.Data.DataTable.Select("dtOptions","HOOK = 50311 and SEQ = 0",V.Local.sRet)
+		F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+			F.Intrinsic.Control.CallSub(preupload)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case(50312)
+		'PostUpload Hook
+		'See if the option is active
+		F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 0",V.Local.sRet)
+		F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+			F.Intrinsic.Control.CallSub(postupload)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CaseElse
+		F.Intrinsic.Control.CallSub(loadoptionsform)
+F.Intrinsic.Control.EndSelect
+
+Program.Sub.Main.End
+
+Program.Sub.getOptions.Start
+V.Local.bRet.Declare
+V.Local.iFor.Declare
+V.Local.sRet.Declare
+
+'F.Global.Registry.ReadValue(user,company code,program as string, regid as long, seq as long, field as long, default as any, return as any)
+'Program = "GAB_5308"
+'Regid = Hook (50310, 50311, 50312)
+'Seq = 0 - 100
+'field = BVAL or SVAL
+'0 - Boolean 
+'1 - Long
+'2 - Float
+'3 - Date
+'4 - Time
+'5 - String
+
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists,=,True)
+	F.Data.DataTable.DeleteRow("dtOptions")
+	F.Data.DataTable.Close("dtOptions")
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.Create("dtOptions",True)
+F.Data.DataTable.AddColumn("dtOptions","HOOK",Long)
+F.Data.DataTable.AddColumn("dtOptions","SEQ",Long)
+F.Data.DataTable.AddColumn("dtOptions","BVAL",Boolean)
+'F.Data.DataTable.AddColumn("dtOptions","IVAL",Long)
+'F.Data.DataTable.AddColumn("dtOptions","FVAL",Float)
+F.Data.DataTable.AddColumn("dtOptions","SVAL",String)
+
+'Read Boolean Values for Hook 50310 - add to ubound as options increase
+F.Intrinsic.Control.For(V.Local.iFor,0,8,1)
+	F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"GAB_5308",50310,V.Local.iFor,0,False,V.Local.bRet)
+	F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"GAB_5308",50310,V.Local.iFor,5,"",V.Local.sRet)
+	F.Data.DataTable.AddRow("dtOptions","HOOK",50310,"SEQ",V.Local.iFor,"BVAL",V.Local.bRet,"SVAL",V.Local.sRet)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'Read Boolean Values for Hook 50311 - add to ubound as options increase
+F.Intrinsic.Control.For(V.Local.iFor,0,1,1)
+	F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"GAB_5308",50311,V.Local.iFor,0,False,V.Local.bRet)
+	F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"GAB_5308",50311,V.Local.iFor,5,"",V.Local.sRet)
+	F.Data.DataTable.AddRow("dtOptions","HOOK",50311,"SEQ",V.Local.iFor,"BVAL",V.Local.bRet,"SVAL",V.Local.sRet)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'Read Boolean Values for Hook 50312 - add to ubound as options increase
+F.Intrinsic.Control.For(V.Local.iFor,0,10,1) 'Modified 8/11/2020 by DD -- Changed Ubound from 9 to 10 for new option MFG Part Approved/Preferred; Modified 3/15/2020 by TCM -- changed ubound from 7 to 9 for 2 new options Inv Vendor Sort and BOM Comments
+	F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"GAB_5308",50312,V.Local.iFor,0,False,V.Local.bRet)
+	F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"GAB_5308",50312,V.Local.iFor,5,"",V.Local.sRet)
+	F.Data.DataTable.AddRow("dtOptions","HOOK",50312,"SEQ",V.Local.iFor,"BVAL",V.Local.bRet,"SVAL",V.Local.sRet)
+F.Intrinsic.Control.Next(V.Local.iFor)
+Program.Sub.getOptions.End
+
+Program.Sub.connect.Start
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+Program.Sub.connect.End
+
+Program.Sub.disconnect.Start
+F.ODBC.Connection!conx.Close
+Program.Sub.disconnect.End
+
+Program.Sub.preLoad.Start
+V.Local.bInstr.Declare
+V.Local.bOnFirst.Declare
+V.Local.bSource.Declare
+V.Local.iTitles.Declare
+V.Local.iFor.Declare
+V.Local.iFor2.Declare
+V.Local.iLen.Declare
+V.Local.iRows.Declare
+V.Local.sChild.Declare
+V.Local.sGSSPart.Declare
+V.Local.sParent.Declare
+V.Local.sRet.Declare
+V.Local.sRow.Declare
+V.Local.sSel.Declare
+V.Local.sSQL.Declare
+V.Local.sTitleArray.Declare
+V.Local.sTitles.Declare
+v.Local.sFile.Declare
+v.Local.sPartTemp.Declare
+v.Local.bSecondRun.Declare
+
+'Connect
+F.Intrinsic.Control.CallSub(connect)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading BDF","BOM Compare - ARC 5308 - Ver: 081720201116")
+
+'Close dtPreload if it exists
+F.Intrinsic.Control.If(V.DataTable.dtPreload.Exists,=,True)
+	F.Data.DataTable.DeleteRow("dtPreload")
+	F.Data.DataTable.Close("dtPreload")
+F.Intrinsic.Control.EndIf
+
+'Guillermo Mansur (04/11/2023): Eliminated the need to create the temp file.
+
+'f.Intrinsic.String.Build("{0}\BOM_TEMP.xml",v.Caller.TempDir,v.Local.sFile)
+'f.Intrinsic.File.Exists(v.Local.sFile,v.Global.bSecondRun)
+'2nd run: bSecondRun = True
+'===================BP=========================
+'if it is 2nd run, read from xml
+'f.Intrinsic.Control.If(v.Global.bSecondRun,=,True)
+	'F.Intrinsic.BDF.Load("bdfPreload","Main-PrePopulate-bdf")
+	'F.Intrinsic.BDF.Clone("bdfPreload", "bdfNew")
+	'f.Data.DataTable.CreateFromXML("dtPreload",v.Local.sFile,true)
+	'f.Intrinsic.Control.For(v.Local.iFor,0,v.DataTable.dtPreload.RowCount--,1)
+		'F.Intrinsic.String.Replace(V.DataTable.dtPreload(V.Local.iFor).FullRow,"*!*","|~|",V.Local.sRow)
+		'F.Intrinsic.BDF.WriteRow("bdfNew",V.Local.sRow)
+	'f.Intrinsic.Control.Next(v.Local.iFor)
+	'f.Intrinsic.BDF.Save("bdfNew","Main-PrePopulate-bdf")
+	'F.Intrinsic.BDF.Load("bdfPreload","Main-PrePopulate-bdf")
+'if it is 1st run, read from bdf
+'f.Intrinsic.Control.Else
+
+	'Load the BDF to dtPreLoad
+	F.Intrinsic.BDF.Load("bdfPreload","Main-PrePopulate-bdf")
+	
+	'Load the BDF Titles
+	F.Intrinsic.BDF.ReadColumnTitle("bdfPreload",V.Local.sTitles)
+	
+	'Split the titles and loop through them to create columns in dtPreload
+	F.Intrinsic.String.Split(V.Local.sTitles,"*!*",V.Local.sTitleArray)
+	F.Data.DataTable.Create("dtPreload",True)
+	V.Local.iTitles.Set(V.Local.sTitleArray.UBound)
+	F.Intrinsic.Control.For(V.Local.iFor,0,V.Local.iTitles,1)
+		F.Intrinsic.UI.ChangeWaitStatus("Creating Data Table",V.Local.iFor,0,V.Local.iTitles)
+		F.Data.DataTable.AddColumn("dtPreload",V.Local.sTitleArray(V.Local.iFor).UCase,"String")
+	F.Intrinsic.Control.Next(V.Local.iFor)
+	
+	'Check for Alt Desc 1 and 2
+	F.Intrinsic.String.IsInString(V.Local.sTitles,"ALT_DESC_1",True,V.Global.bAlt1)
+	F.Intrinsic.String.IsInString(V.Local.sTitles,"ALT_DESC_2",True,V.Global.bAlt2)
+	F.Intrinsic.String.IsInString(V.Local.sTitles,"EXT_DESCRIPTION",True,V.Global.bExtDesc)
+	F.Intrinsic.String.IsInString(V.Local.sTitles,"ROUTER",True,V.Global.bRouter)
+	F.Intrinsic.String.IsInString(V.Local.sTitles,"VENDOR_CODE",True,V.Global.bVendor)
+	
+	'Load the bdf rows into dtPreload
+	F.Intrinsic.BDF.ReadRowCount("bdfPreload",V.Local.iRows)
+	F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+	F.Intrinsic.Control.For(V.Local.iFor,0,V.Local.iRows,1)
+		F.Intrinsic.UI.ChangeWaitStatus("Loading BDF to Data Table",V.Local.iFor,0,V.Local.iRows)
+		F.Intrinsic.BDF.ReadRow("bdfPreload",V.Local.iFor,V.Local.sRow)
+		F.Intrinsic.String.Split(V.Local.sRow,"|~|",V.Local.sRow)
+		V.Local.bOnFirst.Set(False)
+		F.Intrinsic.Control.For(V.Local.iFor2,0,V.Local.iTitles,1)
+			F.Intrinsic.Control.If(V.Local.bOnFirst,=,False)
+				F.Data.DataTable.AddRow("dtPreload",V.Local.sTitleArray(V.Local.iFor2),V.Local.sRow(V.Local.iFor2))
+			F.Intrinsic.Control.Else
+				F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,V.Local.sTitleArray(V.Local.iFor2),V.Local.sRow(V.Local.iFor2))
+			F.Intrinsic.Control.EndIf
+			V.Local.bOnFirst.Set(True)
+		F.Intrinsic.Control.Next(V.Local.iFor2)
+	F.Intrinsic.Control.Next(V.Local.iFor)
+	
+'f.Intrinsic.Control.EndIf
+'==================================================
+
+'See if default source is checked
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 1",V.Local.sRet)
+V.Local.bSource.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldValTrim)
+
+'Get the default values for parents and children
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 2",V.Local.sRet)
+V.Local.sParent.Set(V.DataTable.dtOptions(V.Local.sRet).SVAL!FieldValTrim)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 3",V.Local.sRet)
+V.Local.sChild.Set(V.DataTable.dtOptions(V.Local.sRet).SVAL!FieldValTrim)
+
+
+'=======BP=======
+f.Intrinsic.Control.If(v.DataTable.dtPart.Exists,=,true)
+	f.Data.DataTable.Close("dtPart")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.Create("dtPart",true)
+f.Data.DataTable.AddColumn("dtPart","PARTNO","String")
+f.Data.DataTable.AddColumn("dtPart","MFG_PART","String")
+'================
+
+'Loop through dtPreLoad
+F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtPreload.RowCount--,1)
+	
+	f.Intrinsic.Control.If(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,=,"ASP530F-03-10S-TEST")
+	
+	f.Intrinsic.Control.EndIf
+	F.Intrinsic.String.GSSPartString(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,V.DataTable.dtPreload(V.Local.iFor).Revision!FieldValTrim,V.Local.sGSSPart)
+	F.Intrinsic.String.Trim(V.Local.sGSSPart,V.Local.sGSSPart)
+	F.Intrinsic.Control.If(V.Local.bSource,=,True)
+		'Set default source in the data table if source is blank
+		F.Intrinsic.Control.If(V.DataTable.dtPreload(V.Local.iFor).Source!FieldValTrim,=,"")
+			F.Intrinsic.String.Build("[PARENT] = '{0}'",V.DataTable.dtPreload(V.Local.iFor).PARTNO!FieldValTrim,V.Local.sSel)
+			F.Data.DataTable.Select("dtPreload",V.Local.sSel,V.Local.sRet)
+			F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+				'It's not a parent so it is a child
+				F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"SOURCE",V.Local.sChild)
+			F.Intrinsic.Control.Else
+				'It's a parent so use the default for parent
+				F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"SOURCE",V.Local.sParent)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	'=====================BP===========================
+		v.Local.sPart.Declare
+		v.Local.sMFGPart.Declare
+		v.Local.sMFG.Declare
+		v.Local.sSuf.Declare
+		v.Local.sPartSuf.Declare
+		v.Local.sFilter.Declare
+		'===========================================================================
+		'Guillermo Mansur (03/23/2023) this program was failing in checking if the part is in Inv_Cross_Ref
+		V.Local.sXRF.Declare
+		V.Local.sComment.Declare
+		v.Local.sHighestSuf.Declare
+		F.Intrinsic.String.Left(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim, 23, V.Local.sXRF)
+		F.Intrinsic.String.Mid(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim, 24, 30, V.Local.sMFG)
+		F.Intrinsic.String.Mid(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim, 54, 83, V.Local.sComment)
+		'F.Intrinsic.String.GSSPartString(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,V.DataTable.dtPreload(V.Local.iFor).Revision!FieldValTrim,V.Local.sGSSPart)
+		'f.Intrinsic.String.Build("Select RTRIM(PART),RTRIM(VENDOR) from V_INV_CROSS_REF where RTRIM(MFG_PART) = '{0}' and RTRIM(VENDOR) = '{1}' and User_Defined_Part = '",V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,V.DataTable.dtPreload(V.Local.iFor).VENDORNUMBER!FieldValTrim,v.Local.sSQL)
+		f.Intrinsic.String.Build("Select RTRIM(PART),RTRIM(VENDOR) from V_INV_CROSS_REF where RTRIM(MFG_PART) = '{0}' and RTRIM(VENDOR) = '{1}' and User_Defined_Part = '{2}' and Comment = '{3}'",V.Local.sXRF,V.DataTable.dtPreload(V.Local.iFor).VENDORNUMBER!FieldValTrim, V.Local.sMFG,  V.Local.sComment, v.Local.sSQL)
+		'===========================================================================
+		f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+		f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+		'If part already exists, insert that part as the PartNo.
+			f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+			f.Data.DataTable.SetValue("dtPreload",v.Local.iFor,"PARTNO",v.Local.sRet(0),"DISPLAYPART",v.Local.sRet(0))
+			'f.Data.DataTable.SetValue("dtPreload",v.Local.iFor,"PARTNO",v.Local.sRet(0))
+		f.Intrinsic.Control.Else
+		'If a GSS part doesn't already exist, check length of original PartNo from upload.
+			f.Intrinsic.String.Len(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,v.Local.iLen)
+			
+			f.Intrinsic.Control.If(v.Local.iLen,>,17)
+			'use 1st 14 characters
+				f.Intrinsic.String.Left(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,14,v.Local.sPart)
+			'get the suffix
+				f.Intrinsic.String.Build("Select TOP 1 RTRIM(PART) from V_INVENTORY_MSTR where RTRIM(PART) like '%{0}#%' order by PART",v.Local.sPart,v.Local.sSQL)
+				f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+				'if no part with the suffix exists, set the suffix to 1
+				f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,True)
+					v.Local.sSuf.Set("1")
+					f.Intrinsic.String.LPad(v.Local.sSuf,"0",2,v.Local.sSuf)
+					f.Intrinsic.String.Build("{0}#{1}",v.Local.sPart,v.Local.sSuf,v.Local.sPart)
+				'if it does
+				f.Intrinsic.Control.Else
+					'=======
+					'Guillermo Mansur 03/23/2023
+					'Check if there exists one that's exactly equal.
+					F.Intrinsic.String.Build("Select A.Part from V_INVENTORY_MSTR A left join V_Inv_Cross_Ref B on A.Part =  B.Part where RTRIM(A.PART) like '%{0}#%' and b.MFG_Part = '{1}' and b.User_Defined_Part = '{2}' and b.Comment = '{3}'", V.Local.sPart, V.Local.sXRF, V.Local.sMFG,  V.Local.sComment, V.Local.sSQL)
+					f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sSQL)
+					'If its empty, then yes, add 1 to the suffix
+					'=======
+					f.Intrinsic.Control.If(v.Local.sSQL,=,"")
+						'we need to increment the suffix by 1
+						f.Intrinsic.String.Split(v.Local.sRet,"#",v.Local.sRet)
+						v.Local.sSuf.Set(v.Local.sRet(1))
+						f.Intrinsic.Math.Add(v.Local.sSuf,1,v.Local.sSuf)
+						f.Intrinsic.String.LPad(v.Local.sSuf,"0",2,v.Local.sSuf)
+						f.Intrinsic.String.Build("{0}#{1}",v.Local.sPart,v.Local.sSuf,v.Local.sPart)
+					'=======
+					'Guillermo Mansur 03/23/2023
+					'If not, then keep the same part number
+					F.Intrinsic.Control.Else
+						V.Local.sPart.Set(V.Local.sSQL.Trim)
+					F.Intrinsic.Control.EndIf
+					'=======
+				f.Intrinsic.Control.EndIf
+				
+
+				f.Intrinsic.Control.If(v.DataView.dtPreload!dvPreload.Exists,=,True)
+					f.Data.DataView.Close("dtPreload","dvPreload")
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.Local.sPart,15,v.Local.sPartTemp)
+				f.Intrinsic.String.Build("PARTNO like '{0}%'",v.Local.sPartTemp,v.Local.sFilter)
+				f.Data.DataView.Create("dtPreload","dvPreload",22,v.Local.sFilter,"PARTNO Desc")
+				f.Intrinsic.Control.If(v.DataView.dtPreload!dvPreload.RowCount,>,0)
+					F.Data.DataView.ToDataTable("dtPreload", "dvPreload", "dtPreloadSuffix")
+					V.Local.sHighestSuf.Set(V.DataTable.dtPreloadSuffix(0).PartNo!FieldValTrim)
+					F.Data.DataTable.Close("dtPreloadSuffix")
+					F.Intrinsic.String.Split(V.Local.sHighestSuf, "#",V.Local.sHighestSuf)
+					v.Local.sSuf.Set(v.Local.sHighestSuf(1))
+					f.Intrinsic.Math.Add(V.Local.sSuf,1,v.Local.sSuf)
+					f.Intrinsic.String.LPad(v.Local.sSuf,"0",2,v.Local.sSuf)
+					f.Intrinsic.String.Left(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,14,v.Local.sPart)
+					f.Intrinsic.String.Build("{0}#{1}",v.Local.sPart,v.Local.sSuf,v.Local.sPart)
+				f.Intrinsic.Control.EndIf
+				'this datatable is for dictionary on PostUpload
+				f.Data.DataTable.AddRow("dtPart","PARTNO",v.Local.sPart,"MFG_PART",V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim)
+				'and set the value in dt
+				f.Data.DataTable.SetValue("dtPreload",v.Local.iFor,"PARTNO",v.Local.sPart,"DISPLAYPART",v.Local.sPart)
+				'f.Data.DataTable.SetValue("dtPreload",v.Local.iFor,"PARTNO",v.Local.sPart)
+			f.Intrinsic.Control.Else
+				f.Data.DataTable.AddRow("dtPart","PARTNO",V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,"MFG_PART",V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+		'==================================================
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'Guillermo Mansur (04/11/2023): Eliminated the need to create the temp file.
+
+'===================BP=========================
+'if it is 2nd run, delete the file, so the BOM compare does not read it next time
+'f.Intrinsic.Control.If(v.Global.bSecondRun,=,True)
+
+'	f.Intrinsic.File.DeleteFile(v.Local.sFile)
+'if it is 1st run, save the preload to xml to use on 2nd run
+'f.Intrinsic.Control.Else
+'	f.Data.DataTable.SaveToXML("dtPreload",0,True,v.Local.sFile)
+'f.Intrinsic.Control.EndIf
+'==================================================
+
+f.Intrinsic.String.Build("{0}\dtPart_Temp.csv",v.Caller.TempDir,v.Local.sFile)
+f.Data.DataTable.SaveToCSV("dtPart",v.Local.sFile,True)
+
+'Check for the preview screen
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 4",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	F.Intrinsic.Control.CallSub(loadfmain)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(savepreloadbdf)
+F.Intrinsic.Control.EndIf
+Program.Sub.preLoad.End
+
+Program.Sub.preUpload.Start
+V.Local.bExists.Declare
+V.Local.bInstr.Declare
+V.Local.bRouter.Declare
+V.Local.bOnFirst.Declare
+V.Local.iFor.Declare
+V.Local.iFor2.Declare
+V.Local.iLen.Declare
+V.Local.iRows.Declare
+V.Local.iTitles.Declare
+V.Local.sGSSPart.Declare
+V.Local.sRange.Declare
+V.Local.sRet.Declare
+V.Local.sRouter.Declare
+V.Local.sRow.Declare
+V.Local.sSQL.Declare
+V.Local.sTitleArray.Declare
+V.Local.sTitles.Declare
+'Added 3/15/2020 by TCM -- Add BOM Comments
+v.Local.sSequence.Declare
+v.Local.iBomCommentsCount.Declare
+v.Local.sFieldNames.Declare
+v.Local.bRouterInFieldNames.Declare
+v.Local.sGSSParentPart.Declare
+
+'Connect
+F.Intrinsic.Control.CallSub(connect)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading BDF","BOM Compare - ARC 5308 - Ver: 081720201116")
+
+'Close dtPreUpload if it exists
+F.Intrinsic.Control.If(V.DataTable.dtPreUpload.Exists,=,True)
+	F.Data.DataTable.DeleteRow("dtPreUpload")
+	F.Data.DataTable.Close("dtPreUpload")
+F.Intrinsic.Control.EndIf
+
+'Load the BDF to dtPreUpload
+F.Intrinsic.BDF.Load("bdfPreUpload","Main-PreProcessCompleteData-ReadOnly-bdf")
+
+'F.Intrinsic.BDF.Load("bdfPreUpload","Main-PreProcessData-bdf")
+
+'Load the BDF Titles
+
+F.Intrinsic.BDF.ReadColumnTitle("bdfPreUpload",V.Local.sTitles)
+
+'Split the titles and loop through them to create columns in dtPreUpload
+F.Intrinsic.String.Split(V.Local.sTitles,"*!*",V.Local.sTitleArray)
+F.Data.DataTable.Create("dtPreUpload",True)
+V.Local.iTitles.Set(V.Local.sTitleArray.UBound)
+F.Intrinsic.Control.For(V.Local.iFor,0,V.Local.iTitles,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Creating Data Table",V.Local.iFor,0,V.Local.iTitles)
+	F.Data.DataTable.AddColumn("dtPreUpload",V.Local.sTitleArray(V.Local.iFor),"String")
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'Check for ROUTER
+'THERE'S NOTHING TO EVER SET THIS TO TRUE???
+F.Intrinsic.Control.If(V.Local.bRouter,=,True)
+	F.Intrinsic.String.IsInString(V.Local.sTitles.UCase,"ROUTER",True,V.Local.bInstr)
+	F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+		'F.Data.DataTable.AddColumn("dtPreUpload","ROUTER","String")
+		F.Intrinsic.UI.Msgbox("ROUTER column does not exist!  Add column and try again.","BOM Compare - ARC 5308 - Ver: 081720201116")
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+'Function.Intrinsic.Debug.InvokeDebugger
+
+'Load the bdf rows into dtPreUpload
+F.Intrinsic.BDF.ReadRowCount("bdfPreUpload",V.Local.iRows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+F.Intrinsic.Control.For(V.Local.iFor,0,V.Local.iRows,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Loading BDF to Data Table",V.Local.iFor,0,V.Local.iRows)
+	F.Intrinsic.BDF.ReadRow("bdfPreUpload",V.Local.iFor,V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow,"|~|",V.Local.sRow)
+	V.Local.bOnFirst.Set(False)
+	F.Intrinsic.Control.For(V.Local.iFor2,0,V.Local.iTitles,1)
+		F.Intrinsic.Control.If(V.Local.bOnFirst,=,False)
+			F.Data.DataTable.AddRow("dtPreUpload",V.Local.sTitleArray(V.Local.iFor2),V.Local.sRow(V.Local.iFor2))
+		F.Intrinsic.Control.Else
+			F.Data.DataTable.SetValue("dtPreUpload",V.Local.iFor,V.Local.sTitleArray(V.Local.iFor2),V.Local.sRow(V.Local.iFor2))
+		F.Intrinsic.Control.EndIf
+		V.Local.bOnFirst.Set(True)
+	F.Intrinsic.Control.Next(V.Local.iFor2)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'Had to add this to make sure they have router in their fields list before we try and use it
+v.Local.sFieldNames.Set(V.DataTable.dtPreUpload.FieldNames)
+f.Intrinsic.String.IsInString(v.Local.sFieldNames.UCase,"ROUTER",TRUE,V.Local.bRouterInFieldNames)
+
+F.Data.DataTable.Select("dtOptions","HOOK = 50311 and SEQ = 1",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+'3/15/2020 - Commented this out because the new version of BOM compare is not using this passed variable since we got rid of the "Create Routers" button
+'F.Intrinsic.Control.AndIf(V.Passed.Main-chkCreateRouter-v,=,True)
+F.Intrinsic.Control.AndIf(V.Local.bRouterInFieldNames)
+	F.Intrinsic.Control.If(V.DataTable.dtRouter.Exists,=,False)
+		F.Data.DataTable.Create("dtRouter",True)
+	F.Intrinsic.Control.Else
+		F.Data.DataTable.DeleteRow("dtRouter")
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.UI.InvokeWaitDialog("Uploading Routers","BOM Compare - ARC 5308 - Ver: 081720201116")
+	
+	F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtPreUpload.RowCount--,1)
+		F.Intrinsic.UI.ChangeWaitStatus("Uploading Routers",V.Local.iFor,0,V.DataTable.dtPreUpload.RowCount--)
+		
+		'=====================BP===========================
+		v.Local.sPart.Declare
+		v.Local.sMFGPart.Declare
+		v.Local.sMFG.Declare
+		v.Local.sSuf.Declare
+		v.Local.sPartSuf.Declare
+		
+		'F.Intrinsic.String.GSSPartString(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,V.DataTable.dtPreload(V.Local.iFor).Revision!FieldValTrim,V.Local.sGSSPart)
+		f.Intrinsic.String.Build("Select RTRIM(PART),RTRIM(VENDOR) from V_INV_CROSS_REF where RTRIM(MFG_PART) = '{0}' and RTRIM(VENDOR) = '{1}'",V.DataTable.dtPreUpload(V.Local.iFor).PartNo!FieldValTrim,V.DataTable.dtPreUpload(V.Local.iFor).VENDORNUMBER!FieldValTrim,v.Local.sSQL)
+		f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+		f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+		'If part already exists, insert that part as the PartNo.
+			f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+			f.Data.DataTable.SetValue("dtPreUpload",v.Local.iFor,"PARTNO",v.Local.sRet(0))
+		f.Intrinsic.Control.Else
+		'If a GSS part doesn't already exist, check length of original PartNo from upload.
+			f.Intrinsic.String.Len(V.DataTable.dtPreUpload(V.Local.iFor).PartNo!FieldValTrim,v.Local.iLen)
+			
+			f.Intrinsic.Control.If(v.Local.iLen,>,17)
+			
+			'use 1st 14 characters
+				f.Intrinsic.String.Left(V.DataTable.dtPreUpload(V.Local.iFor).PartNo!FieldValTrim,14,v.Local.sPart)
+			'get the suffix
+				f.Intrinsic.String.Build("Select TOP 1 RTRIM(PART) from V_INVENTORY_MSTR where RTRIM(PART) like '%{0}#%' order by PART",v.Local.sPart,v.Local.sSQL)
+				f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+				'if no part with the suffix exists, set the suffix to 1
+				f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,True)
+					v.Local.sSuf.Set("1")
+				'if it does
+				f.Intrinsic.Control.Else
+				'we need to increment the suffix by 1
+					f.Intrinsic.String.Split(v.Local.sRet,"#",v.Local.sRet)
+					v.Local.sSuf.Set(v.Local.sRet(1))
+					f.Intrinsic.Math.Add(v.Local.sSuf,1,v.Local.sSuf)
+				f.Intrinsic.Control.EndIf
+				'then concatenate with short part no
+				f.Intrinsic.String.LPad(v.Local.sSuf,"0",2,v.Local.sSuf)
+				f.Intrinsic.String.Build("{0}#{1}",v.Local.sPart,v.Local.sSuf,v.Local.sPart)
+				'this datatable is for dictionary on PostUpload
+				f.Data.DataTable.AddRow("dtPart","PARTNO",v.Local.sPart,"MFG_PART",V.DataTable.dtPreUpload(V.Local.iFor).PartNo!FieldValTrim)
+				'and set the value in dt
+				f.Data.DataTable.SetValue("dtPreUpload",v.Local.iFor,"PARTNO",v.Local.sPart)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+		'==================================================
+		
+		F.Intrinsic.Control.If(V.DataTable.dtPreUpload(V.Local.iFor).Router!FieldValTrim,<>,"")
+			'Check to see if the router already exists
+			F.Intrinsic.String.GSSPartString(V.DataTable.dtPreUpload(V.Local.iFor).PartNo!FieldValTrim,V.DataTable.dtPreUpload(V.Local.iFor).Revision!FieldValTrim,V.Local.sGSSPart)
+			F.Intrinsic.String.Build("select * from V_ROUTER_LINE where ROUTER = '{0}'",V.Local.sGSSPart.Trim,V.Local.sSQL)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstSel",V.Local.sSQL)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstSel.EOF,=,False)
+				V.Local.bExists.Set(True)
+			F.Intrinsic.Control.Else
+				V.Local.bExists.Set(False)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rstSel.Close
+			F.Intrinsic.Control.If(V.Local.bExists,=,False)
+				F.Intrinsic.Control.CallSub(loaddtrouter,"Row",V.Local.iFor,"Router",V.DataTable.dtPreUpload(V.Local.iFor).Router!FieldValTrim,"Target",V.Local.sGSSPart.Trim)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iFor)
+
+	F.Intrinsic.Control.If(V.DataTable.dtRouter.RowCount,>,0)
+		F.Intrinsic.Control.CallSub(uploadrouters)
+		F.Intrinsic.Control.CallSub(addroutercomments)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(unload)
+Program.Sub.preUpload.End
+
+Program.Sub.postUpload.Start
+V.Local.bAlt.Declare
+V.Local.bBin.Declare
+V.Local.bCustomer.Declare
+V.Local.bExtra.Declare
+V.Local.bInstr.Declare
+V.Local.bLoop.Declare
+V.Local.bOnFirst.Declare
+V.Local.bRebuild.Declare
+V.Local.bVendor.Declare
+V.Local.iTitles.Declare
+V.Local.iFor.Declare
+V.Local.iFor2.Declare
+V.Local.iLen.Declare
+V.Local.iRows.Declare
+V.Local.sGSSPart.Declare
+V.Local.sParents.Declare
+V.Local.sRange.Declare
+V.Local.sRet.Declare
+V.Local.sRow.Declare
+V.Local.sSel.Declare
+V.Local.sSQL.Declare
+V.Local.sTitleArray.Declare
+V.Local.sTitles.Declare
+'ADDED 3/15/2020 BY TCM -- VENDOR SORT AND BOM COMMENTS
+V.Local.bVendorSort.Declare
+v.Local.bBOMComments.Declare
+v.Local.sSequence.Declare
+v.Local.iBomCommentsCount.Declare
+v.Local.sBOMComments.Declare
+'ADDED 8/11/2020 BY DD -- BOM APPROVED AND PREFERRED
+v.Local.bBOMApprPref.Declare
+v.Local.sError.Declare
+v.Local.sMfgPart.Declare
+v.Local.sMfgName.Declare
+'ADD 10/7/2020 BY DD -- SUPPORT FOR LONG PART MFG XREF
+v.Local.sLPartMfgXref.Declare
+v.Local.iLpartMfgXrefLen.Declare
+v.Local.sLPartMfgXrefSeq.Declare(String,"001")
+v.Local.iLpartSeqCnt.Declare
+v.Local.sMfgPartOriginal.Declare
+v.Local.sUserDefinedPart.Declare
+v.Local.sFile.Declare
+v.Local.sComment.Declare
+
+'Connect
+F.Intrinsic.Control.CallSub(connect)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading BDF","BOM Compare - ARC 5308 - Ver: 090220201203")
+
+'Close dtPostUpload if it exists
+F.Intrinsic.Control.If(V.DataTable.dtPostUpload.Exists,=,True)
+	F.Data.DataTable.DeleteRow("dtPostUpload")
+	F.Data.DataTable.Close("dtPostUpload")
+F.Intrinsic.Control.EndIf
+
+'Load the BDF to dtPreLoad
+F.Intrinsic.BDF.Load("bdfPostUpload","Main-PostProcessCompleteData-ReadOnly-bdf")
+'F.Intrinsic.BDF.Load("bdfPostUpload","Main-PostProcessData-bdf")
+
+'Load the BDF Titles
+F.Intrinsic.BDF.ReadColumnTitle("bdfPostUpload",V.Local.sTitles)
+
+'Split the titles and loop through them to create columns in dtPreload
+F.Intrinsic.String.Split(V.Local.sTitles,"*!*",V.Local.sTitleArray)
+F.Data.DataTable.Create("dtPostUpload",True)
+V.Local.iTitles.Set(V.Local.sTitleArray.UBound)
+F.Intrinsic.Control.For(V.Local.iFor,0,V.Local.iTitles,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Creating Data Table",V.Local.iFor,0,V.Local.iTitles)
+	F.Data.DataTable.AddColumn("dtPostUpload",V.Local.sTitleArray(V.Local.iFor).UCase,"String")
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'Check for VENDOR_CODE, MFR_PART_NO, MFR_NAME, CUSTOMER, CUSTOMER_PART, AltDescription1, AltDescription2, DEFAULT_BIN
+F.Intrinsic.String.IsInString(V.Local.sTitles,"VENDOR_CODE",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","VENDOR_CODE","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"MFR_PART_NO",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","MFR_PART_NO","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"MFR_NAME",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","MFR_NAME","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"CUSTOMER",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","CUSTOMER","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"CUSTOMER_PART",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","CUSTOMER_PART","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"AltDescription1",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","AltDescription1","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"AltDescription2",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","AltDescription2","String")
+F.Intrinsic.Control.EndIf
+'DD - 9/11/2020 - Extra Description is now a core field in BOM Compare
+'F.Intrinsic.String.IsInString(V.Local.sTitles,"DescExtra",True,V.Local.bInstr)
+'F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+'	'F.Data.DataTable.AddColumn("dtPostUpload","EXT_DESCRIPTION","String")
+'	F.Data.DataTable.AddColumn("dtPostUpload","DescExtra","String")
+'F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"DEFAULT_BIN",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","DEFAULT_BIN","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"VENDOR_SORT",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","VENDOR_SORT","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"BOM_COMMENTS",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","BOM_COMMENTS","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"APPROVED",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","APPROVED","String")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.IsInString(V.Local.sTitles,"PREFERRED",True,V.Local.bInstr)
+F.Intrinsic.Control.If(V.Local.bInstr,=,False)
+	F.Data.DataTable.AddColumn("dtPostUpload","PREFERRED","String")
+F.Intrinsic.Control.EndIf
+
+
+'Load the bdf rows into dtPostUpload
+F.Intrinsic.BDF.ReadRowCount("bdfPostUpload",V.Local.iRows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+F.Intrinsic.Control.For(V.Local.iFor,0,V.Local.iRows,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Loading BDF to Data Table",V.Local.iFor,0,V.Local.iRows)
+	F.Intrinsic.BDF.ReadRow("bdfPostUpload",V.Local.iFor,V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow,"|~|",V.Local.sRow)
+	V.Local.bOnFirst.Set(False)
+	F.Intrinsic.Control.For(V.Local.iFor2,0,V.Local.iTitles,1)
+		F.Intrinsic.Control.If(V.Local.bOnFirst,=,False)
+			F.Data.DataTable.AddRow("dtPostUpload",V.Local.sTitleArray(V.Local.iFor2),V.Local.sRow(V.Local.iFor2))
+		F.Intrinsic.Control.Else
+			F.Data.DataTable.SetValue("dtPostUpload",V.Local.iFor,V.Local.sTitleArray(V.Local.iFor2),V.Local.sRow(V.Local.iFor2))
+		F.Intrinsic.Control.EndIf
+		V.Local.bOnFirst.Set(True)
+	F.Intrinsic.Control.Next(V.Local.iFor2)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'===========BP===============
+f.Intrinsic.String.Build("{0}\dtPart_Temp.csv",v.Caller.TempDir,v.Local.sFile)
+f.Data.DataTable.CreateFromCSV("dtPart",v.Local.sFile,"PARTNO*!*MFG_PART","String*!*String",True)
+
+f.Data.Dictionary.CreateFromSQL("dVendor","conx","Select VENDOR,RTRIM(NAME_VENDOR) from V_VENDOR_MASTER")
+f.Data.Dictionary.SetDefaultReturn("dVendor","")
+f.Data.DataTable.FillFromDictionary("dtPostUpload","dVendor","VENDORNUMBER","MFR_NAME")
+f.Data.Dictionary.Close("dVendor")
+
+f.Data.Dictionary.createFromDatatable("dMfgPART","dtPart","PARTNO","MFG_PART")
+f.Data.Dictionary.SetDefaultReturn("dMfgPART","")
+f.Data.DataTable.FillFromDictionary("dtPostUpload","dMfgPART","PARTNO","MFR_PART_NO")
+f.Data.Dictionary.Close("dMfgPART")
+'=============================
+
+'Loop through dtPostUpload if any of 1,2,3,4,6, or 7 are active
+'Get the options
+V.Local.bLoop.Set(False)
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 1",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bVendor.Set(True)
+	V.Local.bLoop.Set(True)
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 2",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bCustomer.Set(True)
+	V.Local.bLoop.Set(True)
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 3",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bAlt.Set(True)
+	V.Local.bLoop.Set(True)
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 4",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bExtra.Set(True)
+	V.Local.bLoop.Set(True)
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 6",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bRebuild.Set(True)
+	V.Local.bLoop.Set(True)
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 7",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bBin.Set(True)
+	V.Local.bLoop.Set(True)
+F.Intrinsic.Control.EndIf
+'ADDED 3/15/2020 BY TCM -- VENDOR SORT AND BOM COMMENTS
+'INV VENDOR SORT
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 8",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bVendorSort.Set(True)
+	V.Local.bLoop.Set(True)
+F.Intrinsic.Control.EndIf
+'BOM COMMENTS
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 9",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bBOMComments.Set(True)
+	V.Local.bLoop.Set(True)
+F.Intrinsic.Control.EndIf
+'APPROVED & PREFERRED
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 10",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	V.Local.bBOMApprPref.Set(True)
+	V.Local.bLoop.Set(True)
+	
+	'Create datatable to store results that need to be saved
+	f.Data.DataTable.CreateFromSQL("dtBOMXref","conx","select * from bom_xref where 1=0")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.bLoop,=,True)
+	F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtPostUpload.RowCount--,1)
+		F.Intrinsic.String.GSSPartString(V.DataTable.dtPostUpload(V.Local.iFor).PARTNO!FieldValTrim,V.DataTable.dtPostUpload(V.Local.iFor).REVISION!FieldValTrim,V.Local.sGSSPart)
+		F.Intrinsic.String.Trim(V.Local.sGSSPart,V.Local.sGSSPart)
+		F.Intrinsic.Control.if(V.Local.bVendor,=,True)
+			F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).MFR_PART_NO!FieldValTrim,<>,"")			
+				f.Intrinsic.Control.Try
+					'Make all incoming xrefs upper case
+					f.Intrinsic.String.UCase(V.DataTable.dtPostUpload(V.Local.iFor).MFR_PART_NO!FieldValTrim,v.Local.sMfgPart)
+					f.Intrinsic.String.UCase(V.DataTable.dtPostUpload(V.Local.iFor).MFR_NAME!FieldValTrim,v.Local.sMfgName)
+					'f.Global.Inventory.getgssmanufacturer
+					'Check if long mfg xref is used.  Build the long xref and the short xref if needed.
+					f.Intrinsic.Control.If(v.Global.bLongMfgXref)
+						'DD - 3/30/2022 - Get the short mfg part.  If the passed part is > 23 chars, this command will create the long mfg part record, then return the short version of the mfg part.  Else, it will return the original passed part padded to 23 chars.
+						
+						Function.Global.Inventory.GetGSSManufacturerPart(v.Local.sMfgPart,v.Local.sMfgPart)
+						
+'						f.Intrinsic.String.Len(v.Local.sMfgPart,v.Local.iLpartMfgXrefLen)
+'						f.Intrinsic.Control.If(v.Local.iLpartMfgXrefLen,>,18)
+'							v.Local.sLPartMfgXref.Set(v.Local.sMfgPart)
+'							f.Intrinsic.String.Left(v.Local.sLPartMfgXref,18,v.Local.sMfgPartOriginal)
+'							f.Intrinsic.String.Build("{0}{1}||",v.Local.sMfgPartOriginal,v.Local.sLPartMfgXrefSeq,v.Local.sMfgPart)
+'							v.Local.sRet.Set("")
+'							'Check to see if the short version of the mfg part has already been used with another long mfg part.  If so, use the next sequence.
+'							'f.Intrinsic.Control.DoUntil(v.Local.sRet,=,"")
+'								f.Intrinsic.String.Build("select part from v_lpart_mfg_xref where part='{0}';",v.Local.sMfgPart,v.Local.sSQL)
+'								f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+'								f.Intrinsic.Control.If(v.Local.sRet,!=,"")
+'									'See what the next available short part would be
+'									f.Intrinsic.String.Build("select top 1 left(part,21) from v_lpart_mfg_xref where part like '{0}%' order by part desc",v.Local.sMfgPartOriginal,v.Local.sSQL)
+'									f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+'									
+'									f.Intrinsic.Control.If(v.Local.sRet,!=,"")
+'										f.Intrinsic.String.Right(v.Local.sRet,3,v.Local.sLPartMfgXrefSeq)
+'										f.Intrinsic.Math.Add(v.Local.sLPartMfgXrefSeq.Long,1,v.Local.sLPartMfgXrefSeq)
+'										f.Intrinsic.String.Format(v.Local.sLPartMfgXrefSeq,"0000",v.Local.sLPartMfgXrefSeq)
+'									f.Intrinsic.Control.EndIf
+'									
+'									f.Intrinsic.String.Build("{0}{1}||",v.Local.sMfgPartOriginal,v.Local.sLPartMfgXrefSeq,v.Local.sMfgPart)
+'									f.Intrinsic.String.Build("insert into lpart_mfg_xref (part, long_part) values ('{0}', '{1}');",v.Local.sMfgPart,v.Local.sLPartMfgXref,v.Local.sSQL)
+'									f.ODBC.Connection!conx.Execute(v.local.sSQL)
+'								f.Intrinsic.Control.EndIf
+'						f.Intrinsic.Control.EndIf
+					f.Intrinsic.Control.Else
+						f.Intrinsic.String.Left(v.Local.sMfgPart,23,v.Local.sMfgPart)
+						f.Intrinsic.String.Left(v.Local.sMfgName,23,v.Local.sMfgName)
+					f.Intrinsic.Control.EndIf
+					
+					F.Intrinsic.String.Build("select * from INV_CROSS_REF where PART = '{0}' and VENDOR = '{1}' and MFG_PART = '{2}'",V.Local.sGSSPart.UCase,V.DataTable.dtPostUpload(V.Local.iFor).VENDORNUMBER!FieldValTrim,v.Local.sMfgPart,V.Local.sSQL)
+					f.Data.DataTable.CreateFromSQL("dtVendorXref","conx",v.Local.sSQL)
+					
+					f.Intrinsic.Control.If(v.DataTable.dtVendorXref.RowCount,>,0)
+						f.Intrinsic.Control.If(v.DataTable.dtVendorXref(0).MFG_NAME!FieldValTrim,<>,v.Local.sMfgName)
+							'F.Intrinsic.String.Build("DELETE FROM INV_CROSS_REF WHERE PART='{0}' AND MFG_PART='{1}' AND MFG_NAME='{2}' AND VENDOR='{3}'",V.Local.sGSSPart.UCase,v.Local.sMfgPart,v.Local.sMfgName,V.DataTable.dtPostUpload(V.Local.iFor).VENDOR_CODE!FieldValTrim,v.Local.sSQL)
+							
+							F.Intrinsic.String.Build("DELETE FROM INV_CROSS_REF WHERE PART='{0}' AND MFG_PART='{1}' AND MFG_NAME='{2}' AND VENDOR='{3}'",V.Local.sGSSPart.UCase,v.Local.sMfgPart,v.Local.sMfgName,V.DataTable.dtPostUpload(V.Local.iFor).VENDORNUMBER!FieldValTrim,v.Local.sSQL)
+							f.ODBC.Connection!conx.execute(v.Local.sSQL)
+							f.Data.DataTable.DeleteRow("dtVendorXref")
+						f.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+					
+					f.Intrinsic.Control.If(v.DataTable.dtVendorXref.RowCount,=,0)
+						f.Intrinsic.String.Build("insert into inv_cross_ref (part, vendor, mfg_part, mfg_name) values ('{0}', '{1}', '{2}', '{3}');",v.Local.sGSSPart, V.DataTable.dtPostUpload(V.Local.iFor).VENDORNUMBER!FieldValTrim, v.Local.sMfgPart, v.Local.sMfgName,v.Local.sSQL)
+						f.ODBC.Connection!conx.execute(v.Local.sSQL)
+					F.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.Catch	
+					f.Intrinsic.String.Build("Project GAB_5308_BOM_Compare.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, "PostUpload", v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+					f.Intrinsic.UI.Msgbox(v.Local.sError)
+				f.Intrinsic.Control.Finally
+					F.Intrinsic.Control.If(V.DataTable.dtVendorXref.Exists,=,True)
+						F.Data.DataTable.Close("dtVendorXref")
+					F.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.EndTry			
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.bCustomer,=,True)
+			F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).CUSTOMER_PART!FieldValTrim,<>,"")
+				F.Intrinsic.String.Build("select * from INV_CROSS_REF where PART = '{0}' and CUSTOMER = '{1}' and CUSTOMER_PART = '{2}'",V.Local.sGSSPart,V.DataTable.dtPostUpload(V.Local.iFor).CUSTOMER!FieldValTrim,V.DataTable.dtPostUpload(V.Local.iFor).CUSTOMER_PART!FieldValTrim,V.Local.sSQL)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstUpdate",V.Local.sSQL)
+				F.Intrinsic.Control.If(V.ODBC.conx!rstUpdate.EOF,=,True)
+					F.ODBC.conx!rstUpdate.AddNew
+					F.ODBC.conx!rstUpdate.Set!PART(V.Local.sGSSPart)
+					F.ODBC.conx!rstUpdate.Set!CUSTOMER(V.DataTable.dtPostUpload(V.Local.iFor).CUSTOMER!FieldValTrim)
+					F.ODBC.conx!rstUpdate.Set!CUSTOMER_PART(V.DataTable.dtPostUpload(V.Local.iFor).CUSTOMER_PART!FieldValTrim)
+					F.ODBC.conx!rstUpdate.Update
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rstUpdate.Close
+			F.Intrinsic.Control.EndIf		
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.Local.bAlt,=,True)
+			F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).AltDescription1!FieldValTrim,<>,"")
+				F.Intrinsic.String.Build("select * from INVENTORY_MST2 where PART = '{0}'",V.Local.sGSSPart,V.Local.sSQL)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstUpdate",V.Local.sSQL)
+				F.Intrinsic.Control.If(V.ODBC.conx!rstUpdate.EOF,=,False)
+					F.ODBC.conx!rstUpdate.Set!DESCRIPTION_2(V.DataTable.dtPostUpload(V.Local.iFor).AltDescription1!FieldValTrim)
+					F.ODBC.conx!rstUpdate.Update
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rstUpdate.Close
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).AltDescription2!FieldValTrim,<>,"")
+				F.Intrinsic.String.Build("select * from INVENTORY_MST2 where PART = '{0}'",V.Local.sGSSPart,V.Local.sSQL)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstUpdate",V.Local.sSQL)
+				F.Intrinsic.Control.If(V.ODBC.conx!rstUpdate.EOF,=,False)
+					F.ODBC.conx!rstUpdate.Set!DESCRIPTION_3(V.DataTable.dtPostUpload(V.Local.iFor).AltDescription2!FieldValTrim)
+					F.ODBC.conx!rstUpdate.Update
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rstUpdate.Close
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		'DD - 9/11/2020 - Extra Description is now a core field in BOM Compare
+'		F.Intrinsic.Control.If(V.Local.bExtra,=,True)
+'			F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).DescExtra!FieldValTrim,<>,"")
+'				F.Intrinsic.String.Build("select * from INV_EXTRA_TEXT where PART = '{0}'",V.Local.sGSSPart,V.Local.sSQL)
+'				F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstUpdate",V.Local.sSQL)
+'				F.Intrinsic.Control.If(V.ODBC.conx!rstUpdate.EOF,=,True)
+'					F.ODBC.conx!rstUpdate.AddNew
+'					F.ODBC.conx!rstUpdate.Set!PART(V.Local.sGSSPart)
+'				F.Intrinsic.Control.EndIf
+'				F.ODBC.conx!rstUpdate.Set!TEXT(V.DataTable.dtPostUpload(V.Local.iFor).DescExtra!FieldValTrim)
+'				F.ODBC.conx!rstUpdate.Update
+'				F.ODBC.conx!rstUpdate.Close
+'			F.Intrinsic.Control.EndIf
+'		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.bRebuild,=,True)
+			F.Intrinsic.String.Build("select * from V_ROUTER_HEADER where ROUTER = '{0}'",V.DataTable.dtPostUpload(V.Local.iFor).PartNo!FieldValTrim,V.Local.sSQL)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstSel",V.Local.sSQL)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstSel.EOF,=,False)
+				' Rebuild the routers
+				F.Intrinsic.UI.ChangeWaitStatus("Rebuilding affected routers",V.Local.iFor,0,V.DataTable.dtPostUpload.RowCount--)
+					F.Intrinsic.String.Build("{0}!*!{1}",V.Local.sGSSPart,V.Local.sGSSPart,V.Local.sRange)
+					F.Global.General.CallWrapperSync(1001,V.Local.sRange)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rstSel.Close
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.bBin,=,True)
+			F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).DEFAULT_BIN!FieldValTrim,<>,"")
+				F.Intrinsic.String.Build("select * from INVENTORY_MSTR where PART = '{0}'",V.Local.sGSSPart,V.Local.sSQL)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstUpdate",V.Local.sSQL)
+				F.Intrinsic.Control.If(V.ODBC.conx!rstUpdate.EOF,=,False)
+					F.ODBC.conx!rstUpdate.Set!BIN(V.DataTable.dtPostUpload(V.Local.iFor).DEFAULT_BIN!FieldValTrim)
+					F.ODBC.conx!rstUpdate.Update
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rstUpdate.Close
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		'ADDED 3/15/2020 BY TCM -- VENDOR SORT AND BOM COMMENTS
+		'VENDOR SORT
+		'BP
+		F.Intrinsic.Control.If(V.Local.bVendorSort,=,True)
+			F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).VENDORNUMBER!FieldValTrim,<>,"")
+				F.Intrinsic.String.Build("select * from INVENTORY_MST2 where PART = '{0}'",V.Local.sGSSPart,V.Local.sSQL)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstUpdate",V.Local.sSQL)
+				F.Intrinsic.Control.If(V.ODBC.conx!rstUpdate.EOF,=,False)
+					F.ODBC.conx!rstUpdate.Set!NAME_VENDOR(V.DataTable.dtPostUpload(V.Local.iFor).VENDORNUMBER!FieldValTrim)
+					F.ODBC.conx!rstUpdate.Update
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rstUpdate.Close
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		'BOM_COMMENTS
+		F.Intrinsic.Control.If(V.Local.bBOMComments,=,True)
+			F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).BOM_COMMENTS!FieldValTrim,<>,"")
+				'SELECT THE SEQUENCE FROM BOM_MSTR
+				F.Intrinsic.String.Build("SELECT SEQUENCE_BOM FROM BOM_MSTR WHERE PARENT = '{0}' AND PART = '{1}';",V.DataTable.dtPostUpload(V.Local.iFor).PARENT!FieldValTrim,V.Local.sGSSPart,V.Local.sSQL)
+				F.ODBC.Connection!conx.EXECUTEANDRETURN(V.Local.sSQL,V.Local.sSequence)
+				'IF PARENT = PART THEN NEED TO SET SEQUENCE TO 0000 BECAUSE PART IS NOT STORED IN THE BOM TABLE FOR THE PARENT ROW SO IT WILL RETURN BLANK
+				F.Intrinsic.Control.If(V.DataTable.dtPostUpload(V.Local.iFor).PARENT!FieldValTrim,=,V.Local.sGSSPart)
+					V.Local.sSequence.Set("0000")
+				F.Intrinsic.Control.EndIf
+				'CHECK IF BOM COMMENTS EXIST
+				F.Intrinsic.String.Build("SELECT COUNT(1) FROM BOM_NOTES WHERE PARENT = '{0}' AND PARENT_SEQ = '{1}';",V.DataTable.dtPostUpload(V.Local.iFor).PARENT!FieldValTrim,V.Local.sSequence,V.Local.sSQL)
+				F.ODBC.Connection!conx.EXECUTEANDRETURN(V.Local.sSQL,V.Local.iBomCommentsCount)
+				V.Local.sBOMComments.set(V.DataTable.dtPostUpload(V.Local.iFor).BOM_COMMENTS!FieldValTrim)
+				F.Intrinsic.Control.If(V.Local.iBomCommentsCount,>,0)
+				'IF THEY DO THEN DO AN UPDATE
+					F.Intrinsic.String.Build("UPDATE BOM_NOTES SET TEXT = '{0}' WHERE PARENT = '{1}' AND PARENT_SEQ = '{2}';",v.Local.sBOMComments.PSQLFriendly,V.DataTable.dtPostUpload(V.Local.iFor).PARENT!FieldValTrim,V.Local.sSequence,V.Local.sSQL)
+					F.ODBC.Connection!conx.EXECUTE(V.Local.sSQL)
+				'IF THE DO NOT THEN DO AN INSERT
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("INSERT INTO BOM_NOTES VALUES ('{0}','{1}','00','{2}');",V.DataTable.dtPostUpload(V.Local.iFor).PARENT!FieldValTrim,V.Local.sSequence,v.Local.sBOMComments.PSQLFriendly,V.Local.sSQL)
+					F.ODBC.Connection!conx.EXECUTE(V.Local.sSQL)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+		'APPROVED & PREFERRED
+		f.Intrinsic.Control.If(v.Local.bBOMApprPref)
+			f.Intrinsic.String.Build("delete from bom_xref where part='{0}' AND PARENT='{1}'",v.Local.sGSSPart,V.DataTable.dtPostUpload(V.Local.iFor).PARENT!FieldValTrim,v.Local.sSQL)
+			f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+			f.Intrinsic.Control.If(v.Datatable.dtPostUpload(v.Local.iFor).APPROVED!FieldValTrim,<>,"",OR,v.Datatable.dtPostUpload(v.Local.iFor).PREFERRED!FieldValTrim,=,"Y")
+				F.Intrinsic.String.Format(V.Local.iFor,"0000",V.Local.sSequence)
+				f.Data.DataTable.AddRow("dtBOMXref","PARENT",V.DataTable.dtPostUpload(V.Local.iFor).PARENT!FIELDVALTRIM,"PART",V.Local.sGSSPart,"SEQ",V.Local.sSequence,"MFG_PART",v.Local.sMfgPart,"MFG_NAME",v.Local.sMfgName,"PREFERRED",V.DataTable.dtPostUpload(V.Local.iFor).PREFERRED!FIELDVALTRIM)
+				'BP
+				F.Intrinsic.String.Build("INSERT INTO BOM_XREF (PARENT,PART,SEQ,VENDOR,MFG_PART,MFG_NAME,PREFERRED) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}');",V.DataTable.dtPostUpload(V.Local.iFor).PARENT!FIELDVALTRIM,V.Local.sGSSPart,V.Local.sSequence,V.DataTable.dtPostUpload(V.Local.iFor).VENDORNUMBER!FieldValTrim,v.Local.sMfgPart,V.Local.sMfgName,v.Datatable.dtPostUpload(v.Local.iFor).PREFERRED!FieldValTrim,V.Local.sSQL )
+				f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+		
+		'=========BP===========
+		
+		f.Intrinsic.String.Len(V.DataTable.dtPostUpload(V.Local.iFor).MFR_PART_NO!FieldValTrim,v.Local.iLen)
+		f.Intrinsic.Control.If(v.Local.iLen,>,23)
+		
+			f.Intrinsic.String.Mid(V.DataTable.dtPostUpload(V.Local.iFor).MFR_PART_NO!FieldValTrim,24,30,v.Local.sUserDefinedPart)
+			f.Intrinsic.String.Mid(V.DataTable.dtPostUpload(V.Local.iFor).MFR_PART_NO!FieldValTrim,54,30,v.Local.sComment)
+			f.Intrinsic.String.Build("Update INV_CROSS_REF set USER_DEFINED_PART = '{0}',COMMENT = '{1}' where PART = '{2}' and VENDOR = '{3}'",v.Local.sUserDefinedPart,v.Local.sComment,V.DataTable.dtPostUpload(V.Local.iFor).PARTNO!FieldValTrim,V.DataTable.dtPostUpload(V.Local.iFor).VENDORNUMBER!FieldValTrim,v.Local.sSQL)
+			f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+		f.Intrinsic.Control.EndIf
+		'=======================
+	F.Intrinsic.Control.Next(V.Local.iFor)
+F.Intrinsic.Control.EndIf
+
+'Set BOM Complete flag for parents if the option is set
+F.Data.DataTable.Select("dtOptions","HOOK = 50312 and SEQ = 5",V.Local.sRet)
+F.Intrinsic.Control.If(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal,=,True)
+	'Create dvPostUpload
+	F.Data.DataView.Create("dtPostUpload","dvPostUpload")
+
+	'Create dtDistinct
+	F.Data.DataView.ToDataTableDistinct("dtPostUpload","dvPostUpload","dtDistinct","Parent")
+
+	'Loop through dtDistinct and update BOM_MSTR.BOM_COMPLETE for each parent
+	F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtDistinct.RowCount--,1)
+		F.Intrinsic.UI.ChangeWaitStatus("Marking Bills of Materials Complete",V.Local.iFor,0,V.DataTable.dtDistinct.RowCount--)
+		F.Intrinsic.String.Build("update BOM_MSTR set BOM_COMPLETE = 'Y' where PARENT = '{0}' and SEQUENCE_BOM = '0000'",V.DataTable.dtDistinct(V.Local.iFor).Parent!FieldValTrim,V.Local.sSQL)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.Next(V.Local.iFor)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(disconnect)
+Program.Sub.postUpload.End
+
+Program.Sub.LoadOptionsForm.Start
+'Load each value according to the data table
+
+gui.fOptions.cboDefaultMFG.AddItem("M",0)
+gui.fOptions.cboDefaultMFG.AddItem("F",1)
+gui.fOptions.cboDefaultMFG.ListIndex(0)
+gui.fOptions.cboDefaultPur.AddItem("P",0)
+gui.fOptions.cboDefaultPur.AddItem("J",1)
+gui.fOptions.cboDefaultPur.ListIndex(0)
+gui.fOptions.tabMain.SetTab(0)
+F.Intrinsic.Control.BlockEvents
+F.Intrinsic.Control.CallSub(setvalues)
+F.Intrinsic.Control.UnBlockEvents
+gui.fOptions..Show
+Program.Sub.LoadOptionsForm.End
+
+Program.Sub.fMain_UnLoad.Start
+gui.fOptions..Visible(0)
+F.Intrinsic.Control.End
+
+Program.Sub.fMain_UnLoad.End
+
+Program.Sub.cmdSave_Click.Start
+V.Local.iFor.Declare
+F.Intrinsic.Control.CallSub(storevalues)
+F.Data.DataTable.AcceptChanges("dtOptions")
+
+F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtOptions.RowCount--,1)
+	F.Global.Registry.AddValue(-1,V.Caller.CompanyCode,"GAB_5308",V.DataTable.dtOptions(V.Local.iFor).HOOK!FieldVal,V.DataTable.dtOptions(V.Local.iFor).SEQ!FieldVal,False,V.DataTable.dtOptions(V.Local.iFor).SVAL!FieldValTrim,V.DataTable.dtOptions(V.Local.iFor).BVAL!FieldVal,-1,0,V.Ambient.Date,V.Ambient.Time)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Intrinsic.UI.Msgbox("Settings Saved","BOM Compare Options")
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.chkPreLoad_Click.Start
+gui.fOptions.frmPreLoad.Enabled(V.Screen.fOptions!chkPreLoad.Value)
+Program.Sub.chkPreLoad_Click.End
+
+Program.Sub.chkDefaultSource_Click.Start
+gui.fOptions.frmDefaultSource.Enabled(V.Screen.fOptions!chkDefaultSource.Value)
+Program.Sub.chkDefaultSource_Click.End
+
+Program.Sub.cboDefaultMFG_Click.Start
+Program.Sub.cboDefaultMFG_Click.End
+
+Program.Sub.cboDefaultPur_Click.Start
+Program.Sub.cboDefaultPur_Click.End
+
+Program.Sub.chkUpdatePreview_Click.Start
+gui.fOptions.frmUpdatePreview.Enabled(V.Screen.fOptions!chkUpdatePreview.Value)
+Program.Sub.chkUpdatePreview_Click.End
+
+Program.Sub.chkPreviewDesc_Click.Start
+Program.Sub.chkPreviewDesc_Click.End
+
+Program.Sub.chkPreviewSource_Click.Start
+Program.Sub.chkPreviewSource_Click.End
+
+Program.Sub.chkPreviewPL_Click.Start
+Program.Sub.chkPreviewPL_Click.End
+
+Program.Sub.chkPreUpload_Click.Start
+gui.fOptions.frmPreUpload.Enabled(V.Screen.fOptions!chkPreUpload.Value)
+Program.Sub.chkPreUpload_Click.End
+
+Program.Sub.chkCpyRtr_Click.Start
+Program.Sub.chkCpyRtr_Click.End
+
+Program.Sub.chkPostUpload_Click.Start
+gui.fOptions.frmPostUpload.Enabled(V.Screen.fOptions!chkPostUpload.Value)
+Program.Sub.chkPostUpload_Click.End
+
+Program.Sub.chkXrefVen_Click.Start
+Program.Sub.chkXrefVen_Click.End
+
+Program.Sub.chkXrefCust_Click.Start
+Program.Sub.chkXrefCust_Click.End
+
+Program.Sub.chkAltDesc_Click.Start
+Program.Sub.chkAltDesc_Click.End
+
+Program.Sub.chkExtraDesc_Click.Start
+Program.Sub.chkExtraDesc_Click.End
+
+Program.Sub.chkBOMComplete_Click.Start
+Program.Sub.chkBOMComplete_Click.End
+
+Program.Sub.chkRebuildRtrs_Click.Start
+Program.Sub.chkRebuildRtrs_Click.End
+
+Program.Sub.setValues.Start
+V.Local.iVal.Declare
+
+V.Local.iVal.Set(-1)
+
+F.Data.DataView.Create("dtOptions","dv50310")
+F.Data.DataView.SetFilter("dtOptions","dv50310","HOOK = 50310")
+F.Data.DataView.Create("dtOptions","dv50311")
+F.Data.DataView.SetFilter("dtOptions","dv50311","HOOK = 50311")
+F.Data.DataView.Create("dtOptions","dv50312")
+F.Data.DataView.SetFilter("dtOptions","dv50312","HOOK = 50312")
+
+'Hook 50310
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkPreLoad.Value(V.DataView.dtOptions!dv50310(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkDefaultSource.Value(V.DataView.dtOptions!dv50310(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.cboDefaultMFG.Text(V.DataView.dtOptions!dv50310(V.Local.iVal).SVAL!FieldValTrim)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.cboDefaultPur.Text(V.DataView.dtOptions!dv50310(V.Local.iVal).SVAL!FieldValTrim)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkUpdatePreview.Value(V.DataView.dtOptions!dv50310(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkPreviewDesc.Value(V.DataView.dtOptions!dv50310(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkPreviewSource.Value(V.DataView.dtOptions!dv50310(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkPreviewPL.Value(V.DataView.dtOptions!dv50310(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkPreviewSC.Value(V.DataView.dtOptions!dv50310(V.Local.iVal).BVAL!FieldVal)
+
+V.Local.iVal.Set(-1)
+
+
+'Hook 50311
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkPreUpload.Value(V.DataView.dtOptions!dv50311(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkCpyRtr.Value(V.DataView.dtOptions!dv50311(V.Local.iVal).BVAL!FieldVal)
+'V.Local.iVal.Set(V.Local.iVal.++)
+'gui.fOptions.chkBOMComments.Value(V.DataView.dtOptions!dv50311(V.Local.iVal).BVAL!FieldVal)
+
+V.Local.iVal.Set(-1)
+
+'Hook 50312
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkPostUpload.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkXrefVen.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkXrefCust.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkAltDesc.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkExtraDesc.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkBOMComplete.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkRebuildRtrs.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkDefaultBin.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+'Added 3/15/20 by TCM -- Inventory Vendor Sort and BOM Comments
+gui.fOptions.chkVendorSort.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+gui.fOptions.chkBOMComments.Value(V.DataView.dtOptions!dv50312(V.Local.iVal).BVAL!FieldVal)
+V.Local.iVal.Set(V.Local.iVal.++)
+'Added 8/11/2020 by DD -- Mfg Part Approved/Preferred
+gui.fOptions.chkMfgPartAppr.Value(v.DataView.dtOptions!dv50312(v.Local.iVal).BVAL!FieldVal)
+
+gui.fOptions.frmPreLoad.Enabled(V.Screen.fOptions!chkPreLoad.Value)
+gui.fOptions.frmDefaultSource.Enabled(V.Screen.fOptions!chkDefaultSource.Value)
+gui.fOptions.frmUpdatePreview.Enabled(V.Screen.fOptions!chkUpdatePreview.Value)
+gui.fOptions.frmPreUpload.Enabled(V.Screen.fOptions!chkPreUpload.Value)
+gui.fOptions.frmPostUpload.Enabled(V.Screen.fOptions!chkPostUpload.Value)
+
+F.Data.DataView.Close("dtOptions","dv50310")
+F.Data.DataView.Close("dtOptions","dv50311")
+F.Data.DataView.Close("dtOptions","dv50312")
+Program.Sub.setValues.End
+
+Program.Sub.storeValues.Start
+V.Local.iVal.Declare
+
+F.Data.DataView.Create("dtOptions","dv50310")
+F.Data.DataView.SetFilter("dtOptions","dv50310","HOOK = 50310")
+F.Data.DataView.Create("dtOptions","dv50311")
+F.Data.DataView.SetFilter("dtOptions","dv50311","HOOK = 50311")
+F.Data.DataView.Create("dtOptions","dv50312")
+F.Data.DataView.SetFilter("dtOptions","dv50312","HOOK = 50312")
+
+V.Local.iVal.Set(-1)
+
+'Hook 50310
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkPreLoad.Value)
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkDefaultSource.Value)
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"SVAL",V.Screen.fOptions!cboDefaultMFG.Text)
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"SVAL",V.Screen.fOptions!cboDefaultPur.Text)
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkUpdatePreview.Value)
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkPreviewDesc.Value)
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkPreviewSource.Value)
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkPreviewPL.Value)
+F.Data.DataView.SetValue("dtOptions","dv50310",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkPreviewSC.Value)
+
+V.Local.iVal.Set(-1)
+
+'Hook 50311
+F.Data.DataView.SetValue("dtOptions","dv50311",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkPreUpLoad.Value)
+F.Data.DataView.SetValue("dtOptions","dv50311",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkCpyRtr.Value)
+'F.Data.DataView.SetValue("dtOptions","dv50311",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkBOMComments.Value)
+
+V.Local.iVal.Set(-1)
+
+'Hook 50312
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkPostUpload.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkXrefVen.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkXrefCust.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkAltDesc.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkExtraDesc.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkBOMComplete.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkRebuildRtrs.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkDefaultBin.Value)
+'added 3/15/2020 by TCM -- Include Inv vendor sort and bom comments
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkVendorSort.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkBOMComments.Value)
+F.Data.DataView.SetValue("dtOptions","dv50312",V.Local.iVal.++,"BVAL",V.Screen.fOptions!chkMfgPartAppr.Value)
+
+F.Data.DataView.Close("dtOptions","dv50310")
+F.Data.DataView.Close("dtOptions","dv50311")
+F.Data.DataView.Close("dtOptions","dv50312")
+Program.Sub.storeValues.End
+
+Program.Sub.LoaddtRouter.Start
+V.Local.iRow.Declare
+V.Local.sRouter.Declare
+V.Local.sSQL.Declare
+V.Local.sTarget.Declare
+
+V.Local.iRow.Set(V.Args.Row)
+V.Local.sRouter.Set(V.Args.Router)
+V.Local.sTarget.Set(V.Args.Target)
+
+'Close dtTemp if it exists
+F.Intrinsic.Control.If(V.DataTable.dtTemp.Exists,=,True)
+	F.Data.DataTable.DeleteRow("dtTemp")
+	F.Data.DataTable.Close("dtTemp")
+F.Intrinsic.Control.EndIf
+
+'Read Material, Comment and Outside Records from ROUTER_LINE into dtTemp
+F.Intrinsic.String.Build("select A.ROUTER, '{0}' AS NEWROUTER, A.LINE_ROUTER, A.LMO, A.PART_WC_OUTSIDE AS PART_NO_OUTSIDE, A.DESC_RT_LINE, A.SET_UP, A.RUN_TIME, A.OPERATION, A.RATE, A.UM_INVENTORY, A.FREQUENCY, A.OVERLAP, A.WC_FACTOR, A.FLAG_MINIMUM, A.AMT_MINIMUM, A.CREW_SIZE, A.LEAD_TIME, '' AS WORKCENTER, B.PROD_LINE, B.CUSTOMER, C.QUANTITY_1, C.QUANTITY_2, C.QUANTITY_3, C.QUANTITY_4, D.QUANTITY_5, D.QUANTITY_6, D.QUANTITY_7, D.QUANTITY_8, E.QUANTITY_9, E.QUANTITY_10 FROM V_ROUTER_LINE A left outer join V_ROUTER_HEADER B on A.ROUTER = B.ROUTER left outer join V_RTR_PRICE_1_4 C on A.ROUTER = C.ROUTER left outer join V_RTR_PRICE_5_8 D on A.ROUTER = D.ROUTER left outer join V_RTR_PRICE_9_10 E on A.ROUTER = E.ROUTER WHERE A.LMO <> 'L' AND A.ROUTER = '{1}' AND (C.LINE_ROUTER = '' or isnull(C.LINE_ROUTER,'True') = 'True') AND (D.LINE_ROUTER = '' or isnull(D.LINE_ROUTER,'True') = 'True') AND (E.LINE_ROUTER = '' or isnull(E.LINE_ROUTER,'True') = 'True')",V.Local.sTarget,V.Local.sRouter,V.Local.sSQl)
+F.Data.DataTable.CreateFromSQL("dtTemp","conx",V.Local.sSQL,True)
+F.Data.DataTable.Merge("dtTemp","dtRouter",True,1)
+F.Data.DataTable.AcceptChanges("dtRouter")
+
+'Close dtTemp if it exists
+F.Intrinsic.Control.If(V.DataTable.dtTemp.Exists,=,True)
+	F.Data.DataTable.DeleteRow("dtTemp")
+	F.Data.DataTable.Close("dtTemp")
+F.Intrinsic.Control.EndIf
+
+'Read Labor Records from ROUTER_LINE
+F.Intrinsic.String.Build("select A.ROUTER, '{0}' AS NEWROUTER, A.LINE_ROUTER, A.LMO, A.PART_WC_OUTSIDE as WORKCENTER, A.DESC_RT_LINE, A.SET_UP, A.RUN_TIME, A.OPERATION, A.RATE, A.UM_INVENTORY, A.FREQUENCY, A.OVERLAP, A.WC_FACTOR, A.FLAG_MINIMUM, A.AMT_MINIMUM, A.CREW_SIZE, A.LEAD_TIME, '' AS PART_NO_OUTSIDE, B.PROD_LINE, B.CUSTOMER, C.QUANTITY_1, C.QUANTITY_2, C.QUANTITY_3, C.QUANTITY_4, D.QUANTITY_5, D.QUANTITY_6, D.QUANTITY_7, D.QUANTITY_8, E.QUANTITY_9, E.QUANTITY_10 FROM V_ROUTER_LINE A left outer join V_ROUTER_HEADER B on A.ROUTER = B.ROUTER left outer join V_RTR_PRICE_1_4 C on A.ROUTER = C.ROUTER left outer join V_RTR_PRICE_5_8 D on A.ROUTER = D.ROUTER left outer join V_RTR_PRICE_9_10 E on A.ROUTER = E.ROUTER where A.LMO = 'L' AND A.ROUTER = '{1}' AND (C.LINE_ROUTER = '' or isnull(C.LINE_ROUTER,'True') = 'True') AND (D.LINE_ROUTER = '' or isnull(D.LINE_ROUTER,'True') = 'True') AND (E.LINE_ROUTER = '' or isnull(E.LINE_ROUTER,'True') = 'True')",V.Local.sTarget,V.Local.sRouter,V.Local.sSQl)
+F.Data.DataTable.CreateFromSQL("dtTemp","conx",V.Local.sSQL,True)
+
+F.Data.DataTable.Merge("dtTemp","dtRouter",True,1)
+F.Data.DataTable.AcceptChanges("dtRouter")
+
+'Close dtTemp if it exists
+F.Intrinsic.Control.If(V.DataTable.dtTemp.Exists,=,True)
+	F.Data.DataTable.DeleteRow("dtTemp")
+	F.Data.DataTable.Close("dtTemp")
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoaddtRouter.End
+
+Program.Sub.UploadRouters.Start
+' Create a flat file from dtRouter and upload it using UPLRTRH
+
+V.Local.bFileCheck.Declare(Boolean)
+V.Local.bFileCheckOld.Declare(Boolean)
+V.Local.iFor.Declare(Long)
+V.Local.sData.Declare
+V.Local.sFile.Declare(String)
+V.Local.sFileName.Declare(String)
+V.Local.sFileOld.Declare(String)
+V.Local.sHold.Declare(String)
+V.Local.sLine.Declare
+V.Local.sParams.Declare
+V.Local.sPart17.Declare
+V.Local.sRet.Declare
+V.Local.sSel.Declare
+V.Local.sSplit.Declare
+V.Local.sTemp.Declare
+V.Local.bRevisions.Declare
+
+' Check for ROUTERHD in Global Files, create a backup if it exists
+V.Local.sFileName.Set("ROUTERHD")
+F.Intrinsic.String.Concat(V.Caller.FilesDir,"\",V.Local.sFileName,".TXT",V.Local.sFile)
+
+' Loop through the Router DT and write the lines to the flat file
+F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtRouter.RowCount--,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Writing Upload File",V.Local.iFor,0,V.DataTable.dtRouter.RowCount--)
+	' Add lines to string
+	'NEWROUTER	1	20	20
+	F.Intrinsic.String.RPad(V.DataTable.dtRouter(V.Local.iFor).NEWROUTER!FieldValTrim," ",20,V.Local.sLine)
+	'ROUTER DESCRIPTION	21	50	30
+	'Need to check and see if customer is using revisions
+	'70008 revision option
+	'if they are using the "use revisions" option then grab the left 17, otherwise grab the 20 character part
+	F.Global.General.ReadOption("70008",0,False,"0000",v.Local.bRevisions)
+	f.Intrinsic.Control.If(v.Local.bRevisions)
+		F.Intrinsic.String.Left(V.DataTable.dtRouter(V.Local.iFor).NEWROUTER!FieldValTrim,17,V.Local.sPart17)
+	f.Intrinsic.Control.Else
+		v.Local.sPart17.Set(V.DataTable.dtRouter(V.Local.iFor).NEWROUTER!FieldValTrim)
+	f.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Build("PartNo = '{0}'",V.Local.sPart17.Trim,V.Local.sSel)
+	F.Data.DataTable.Select("dtPreUpload",V.Local.sSel,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***NORETURN***")
+		V.Local.sSplit.Redim(0,0)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sSplit)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtPreUpload(V.Local.sSplit(0)).Description!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",50,V.Local.sLine)
+	'LINE_ROUTER	51	56	6
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).LINE_ROUTER!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",56,V.Local.sLine)	
+	'LMO	57	57	1	
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).LMO!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",57,V.Local.sLine)
+	'PART_NO_OUTSIDE	58	77	20	
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).PART_NO_OUTSIDE!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",77,V.Local.sLine)
+	'WORKCENTER	78	81	4	
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).WORKCENTER!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",81,V.Local.sLine)
+	'DESC_RT_LINE	82	111	30	
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).DESC_RT_LINE!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",111,V.Local.sLine)
+	'SET_UP	112	127	16	8.4
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).SET_UP!FieldValTrim,"00000000.0000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",127,V.Local.sLine)
+	'RUN_TIME	128	143	16	8.6
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).RUN_TIME!FieldValTrim,"00000000.000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",143,V.Local.sLine)
+	'CUSTOMER   144 149
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).CUSTOMER!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",155,V.Local.sLine)
+	'OPERATION	156	161	6	
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).OPERATION!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",161,V.Local.sLine)
+	'RATE	162	177	16	8.4
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).RATE!FieldValTrim,"00000000.0000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",177,V.Local.sLine)
+	'UM_INVENTORY	178	179	2
+	'MT	180	392
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).UM_INVENTORY!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",392,V.Local.sLine)
+	'QUANTITY 1 393 408	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_1!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",408,V.Local.sLine)
+	'QUANTITY 2 409 424 16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_2!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",424,V.Local.sLine)
+	'QUANTITY 3 425 440	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_3!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",440,V.Local.sLine)
+	'QUANTITY 4	441	456	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_4!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",457,V.Local.sLine)
+	'FREQUENCY	458	473	16	6.0
+	'MT	474	489	
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).FREQUENCY!FieldValTrim,"000000.0",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",489,V.Local.sLine)
+	'OVERLAP	490	505	16	2.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).OVERLAP!FieldValTrim,"00.0",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",505,V.Local.sLine)
+	'WC_FACTOR	506	521	16	2.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).WC_FACTOR!FieldValTrim,"00.0",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",521,V.Local.sLine)
+	'FLAG_MINIMUM	522	522	1
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).FLAG_MINIMUM!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",522,V.Local.sLine)	
+	'AMT_MINIMUM	523	538	16	8.4
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).AMT_MINIMUM!FieldValTrim,"00000000.0000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",538,V.Local.sLine)
+	'CREW_SIZE	539	554	16	4.4
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).CREW_SIZE!FieldValTrim,"0000.0000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",554,V.Local.sLine)
+	'LEAD_TIME	555	570	16	4.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).LEAD_TIME!FieldValTrim,"0000.0",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",965,v.Local.sLine)
+	'QUANTITY 5	966	981	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_5!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",981,V.Local.sLine)
+	'QUANTITY 6	982	997	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_6!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",997,V.Local.sLine)
+	'QUANTITY 7	998	1013	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_7!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",1013,V.Local.sLine)
+	'QUANTITY 8	1014	1029	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_8!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",1029,V.Local.sLine)
+	'QUANTITY 9	1030	1045	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_9!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",1045,V.Local.sLine)
+	'QUANTITY 10	1046	1061	16	8.0
+	F.Intrinsic.String.Format(V.DataTable.dtRouter(V.Local.iFor).QUANTITY_10!FieldValTrim,"00000000.0000000",V.Local.sTemp)
+	F.Intrinsic.String.Concat(V.Local.sLine,V.Local.sTemp,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",1070,V.Local.sLine)
+	'PROD_LINE 1071 1072 2
+	F.Intrinsic.String.Concat(V.Local.sLine,V.DataTable.dtRouter(V.Local.iFor).PROD_LINE!FieldValTrim,V.Local.sLine)
+	F.Intrinsic.String.RPad(V.Local.sLine," ",1072,V.Local.sLine)
+	'		1090	if it's a comment line, make the last byte a Y so it will create a comment sequence
+	'Pad with spaces to 1089, then add Y if comment, or space if it's not
+	F.Intrinsic.String.RPad(V.Local.sLine," ",1089,V.Local.sLine)
+	F.Intrinsic.Control.If(V.DataTable.dtRouter(V.Local.iFor).LMO!FieldValTrim,=,"C")
+		F.Intrinsic.String.Concat(V.Local.sLine,"Y",V.Local.sLine)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.Local.sLine," ",V.Local.sLine)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.sData.Trim,=,"")
+		V.Local.sData.Set(V.Local.sLine)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.Local.sData,V.Ambient.NewLine,V.Local.sLine,V.Local.sData)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'String to file
+F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sData)
+
+F.Intrinsic.UI.ChangeWaitStatus("Uploading Routers",0,0,100)
+' Run the 1Shot to upload the file
+'F.Global.General.CallWrapperSync(50,"UPLRTRH/A/X")
+
+'Setup params for call
+F.Intrinsic.String.ConcatCallWrapperArgs(1,"ROUTERHD",V.Local.sParams)
+
+F.Global.General.CallWrapperSync(6021,V.Local.sParams)
+
+Program.Sub.UploadRouters.End
+
+Program.Sub.unload.Start
+F.Intrinsic.Control.CallSub(disconnect)
+F.Intrinsic.Control.End
+
+Program.Sub.unload.End
+
+Program.Sub.addRouterComments.Start
+V.Local.iFor.Declare
+V.Local.sSeq.Declare
+V.Local.sSQL.Declare
+
+'Loop through dtRouter and insert comment sequences into RTR_SEQ_COMMENTS
+F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtRouter.RowCount--,1)
+	F.Intrinsic.String.Build("select * from RTR_SEQ_COMMENTS where RTR_NUMBER = '{0}' and RTR_SEQ = '{1}'",V.DataTable.dtRouter(V.Local.iFor).ROUTER!FieldValTrim,V.DataTable.dtRouter(V.Local.iFor).LINE_ROUTER!FieldValTrim,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstSel",V.Local.sSQL)
+	'F.Intrinsic.Control.If(V.ODBC.conx!rstSel.EOF,=,False)
+		'F.Intrinsic.String.Build("insert into RTR_SEQ_COMMENTS VALUES ('{0}','{1}','{2}'",V.DataTable.dtRouter(V.Local.iFor).NEWROUTER!FieldValTrim,V.ODBC.conx!rstSel.FieldValTrim!RTR_SEQ,V.ODBC.conx!rstSel.FieldValTrim!TEXT,V.Local.sSQL)
+		'F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+	'F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.ODBC.conx!rstSel.EOF,=,False)
+		F.Intrinsic.String.Format(V.ODBC.conx!rstSel.FieldValTrim!RTR_SEQ,"000000",V.Local.sSeq)
+		F.Intrinsic.String.Build("select * from RTR_SEQ_COMMENTS where RTR_NUMBER = '{0}' and RTR_SEQ = '{1}'",V.DataTable.dtRouter(V.Local.iFor).NEWROUTER!FieldValTrim,V.Local.sSeq,V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstUpdate",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstUpdate.EOF,=,True)
+			F.ODBC.conx!rstUpdate.AddNew
+			F.ODBC.conx!rstUpdate.Set!RTR_NUMBER(V.DataTable.dtRouter(V.Local.iFor).NEWROUTER!FieldValTrim)
+			F.ODBC.conx!rstUpdate.Set!RTR_SEQ(V.ODBC.conx!rstSel.FieldValTrim!RTR_SEQ)
+			F.ODBC.conx!rstUpdate.Set!TEXT(V.ODBC.conx!rstSel.FieldValTrim!TEXT)
+			F.ODBC.conx!rstUpdate.Update
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstUpdate.Close
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstSel.Close
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+
+Program.Sub.addRouterComments.End
+
+Program.Sub.savePreloadBDF.Start
+V.Local.iFor.Declare
+V.Local.sRow.Declare
+
+'f.Intrinsic.Control.If(v.Global.bSecondRun)
+'	F.Intrinsic.BDF.Load("bdfPreload","Main-PrePopulate-bdf")
+'f.Intrinsic.Control.EndIf
+
+'Clone the bdf
+F.Intrinsic.BDF.Clone("bdfPreload","bdfClone")
+
+'Redim sRow
+V.Local.sRow.Redim(0,0)
+V.Local.sRow.Set("")
+
+'Loop through dtPreLoad
+F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtPreload.RowCount--,1)
+	'Post to the bdfClone
+	F.Intrinsic.String.Replace(V.DataTable.dtPreload(V.Local.iFor).FullRow,"*!*","|~|",V.Local.sRow)
+	F.Intrinsic.BDF.WriteRow("bdfClone",V.Local.sRow)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Intrinsic.BDF.Save("bdfClone","Main-PrePopulate-bdf")
+
+F.Intrinsic.Control.CallSub(disconnect)
+F.Intrinsic.Control.End
+
+Program.Sub.savePreloadBDF.End
+
+Program.Sub.loadfmain.Start
+V.Local.bDescription.Declare
+V.Local.bPL.Declare
+V.Local.bSortCode.Declare
+V.Local.bSource.Declare
+V.Local.iFor.Declare
+V.Local.iIndex.Declare
+V.Local.sDefault.Declare
+V.Local.sGSSPart.Declare
+V.Local.sGv.Declare
+V.Local.sProperty.Declare
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+
+'Check to see if the options are checked for Description, Source, and Product Line
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 5",V.Local.sRet)
+V.Local.bDescription.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 6",V.Local.sRet)
+V.Local.bSource.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 7",V.Local.sRet)
+V.Local.bPL.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 8",V.Local.sRet)
+V.Local.bSortCode.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+
+'Add Columns for Product line, Unit of Measure, and Description Checkboxes
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	F.Data.DataTable.AddColumn("dtPreload","PLCheck",Boolean,False)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	F.Data.DataTable.AddColumn("dtPreload","DescCheck",Boolean,False)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	F.Data.DataTable.AddColumn("dtPreload","SrcCheck",Boolean,False)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	F.Data.DataTable.AddColumn("dtPreload","SortCheck",Boolean,False)
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.AddColumn("dtPreload","DiffCheck",Boolean,False)
+
+'Loop through dtPreload and check for differences in the inventory master
+F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtPreload.RowCount--,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Validating Differences",V.Local.iFor,0,V.DataTable.dtPreload.RowCount--)
+	F.Intrinsic.String.GSSPartString(V.DataTable.dtPreload(V.Local.iFor).PARTNO!FieldValTrim,V.DataTable.dtPreload(V.Local.iFor).REVISION!FieldValTrim,V.Local.sGSSPart)
+	F.Intrinsic.String.Build("select * from V_INVENTORY_ALL where PART = '{0}'",V.Local.sGSSPart,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstSel",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstSel.EOF,=,False)
+		F.Intrinsic.Control.If(V.Local.bPL,=,True)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstSel.FieldValTrim!PRODUCT_LINE,<>,V.DataTable.dtPreload(V.Local.iFor).PRODUCTLINE!FieldValTrim)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtPreload(V.Local.iFor).PRODUCTLINE!FieldValTrim,<>,"")
+				F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"DiffCheck",True)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstSel.FieldValTrim!DESCRIPTION,<>,V.DataTable.dtPreload(V.Local.iFor).DESCRIPTION!FieldValTrim)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtPreload(V.Local.iFor).DESCRIPTION!FieldValTrim,<>,"")
+				F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"DiffCheck",True)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.bSource,=,True)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstSel.FieldValTrim!CODE_SOURCE,<>,V.DataTable.dtPreload(V.Local.iFor).SOURCE!FieldValTrim)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtPreload(V.Local.iFor).SOURCE!FieldValTrim,<>,"")
+				F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"DiffCheck",True)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstSel.FieldValTrim!CODE_SORT,<>,V.DataTable.dtPreload(V.Local.iFor).SORTCODE!FieldValTrim)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtPreload(V.Local.iFor).SORTCODE!FieldValTrim,<>,"")
+				F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"DiffCheck",True)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstSel.Close
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+V.Local.sGv.Set("gvMain")
+
+F.Data.DataView.Create("dtPreload","dvMain")
+F.Data.DataView.SetFilter("dtPreload","dvMain","DiffCheck = True")
+
+gui.fMain.GsGcMain.AddGridviewFromDataview(V.Local.sGv,"dtPreload","dvMain")
+
+gui.fMain.GsGcMain.SetGridviewProperty(V.Local.sGv,"AllowAddRows",False)
+gui.fMain.GsGcMain.SetGridviewProperty(V.Local.sGv,"AllowDeleteRows",False)
+gui.fMain.GsGcMain.SetGridviewProperty(V.Local.sGv,"Editable",True)
+gui.fMain.GsGcMain.SetGridviewProperty(V.Local.sGv,"MultiSelect",False)
+gui.fMain.GsGcMain.SetGridviewProperty(V.Local.sGv,"ShowGroupPanel",False)
+
+V.Local.sProperty.Set("AllowEdit")
+V.Local.sDefault.Set("False")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARTNO",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"REVISION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"INVPART",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DESCRIPTION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"QUANTITY",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UM",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"COST",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SOURCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DRAWING",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEADTIME",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEVEL",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LOCATION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO1",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO2",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARENT",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PRODUCTLINE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SEQUENCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SORTCODE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"TAG",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"CATEGORY",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Global.bRouter,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"ROUTER",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bVendor,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"VENDOR_CODE",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_PART_NO",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_NAME",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bExtDesc,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"EXT_DESCRIPTION",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PLCheck",V.Local.sProperty,True)
+F.Intrinsic.Control.EndIf
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UMCheck",V.Local.sProperty,True)
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescCheck",V.Local.sProperty,True)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SrcCheck",V.Local.sProperty,True)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SortCheck",V.Local.sProperty,True)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DiffCheck",V.Local.sProperty,V.Local.sDefault)
+
+V.Local.sProperty.Set("ReadOnly")
+V.Local.sDefault.Set("True")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARTNO",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"REVISION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"INVPART",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DESCRIPTION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"QUANTITY",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UM",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"COST",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SOURCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DRAWING",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEADTIME",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEVEL",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LOCATION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO1",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO2",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARENT",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PRODUCTLINE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SEQUENCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SORTCODE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"TAG",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"CATEGORY",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Global.bRouter,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"ROUTER",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bVendor,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"VENDOR_CODE",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_PART_NO",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_NAME",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bExtDesc,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"EXT_DESCRIPTION",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PLCheck",V.Local.sProperty,False)
+F.Intrinsic.Control.EndIf
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UMCheck",V.Local.sProperty,False)
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescCheck",V.Local.sProperty,False)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SrcCheck",V.Local.sProperty,False)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SortCheck",V.Local.sProperty,False)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DiffCheck",V.Local.sProperty,V.Local.sDefault)
+
+V.Local.sProperty.Set("HeaderFontBold")
+V.Local.sDefault.Set("True")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARTNO",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"REVISION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"INVPART",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DESCRIPTION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"QUANTITY",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UM",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"COST",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SOURCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DRAWING",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEADTIME",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEVEL",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LOCATION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO1",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO2",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARENT",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PRODUCTLINE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SEQUENCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SORTCODE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"TAG",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"CATEGORY",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Global.bRouter,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"ROUTER",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bVendor,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"VENDOR_CODE",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_PART_NO",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_NAME",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bExtDesc,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"EXT_DESCRIPTION",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PLCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UMCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SrcCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SortCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DiffCheck",V.Local.sProperty,V.Local.sDefault)
+
+V.Local.sProperty.Set("HeaderBackColor")
+V.Local.sDefault.Set("MediumSeaGreen")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARTNO",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"REVISION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"INVPART",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DESCRIPTION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"QUANTITY",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UM",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"COST",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SOURCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DRAWING",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEADTIME",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEVEL",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LOCATION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO1",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO2",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARENT",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PRODUCTLINE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SEQUENCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SORTCODE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"TAG",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"CATEGORY",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Global.bRouter,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"ROUTER",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bVendor,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"VENDOR_CODE",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_PART_NO",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_NAME",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bExtDesc,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"EXT_DESCRIPTION",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PLCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UMCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SrcCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SortCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DiffCheck",V.Local.sProperty,V.Local.sDefault)
+
+V.Local.sProperty.Set("VisibleIndex")
+V.Local.iIndex.Set(-1)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARTNO",V.Local.sProperty,V.Local.iIndex.++)
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescCheck",V.Local.sProperty,V.Local.iIndex.++)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DESCRIPTION",V.Local.sProperty,V.Local.iIndex.++)
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PLCheck",V.Local.sProperty,V.Local.iIndex.++)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PRODUCTLINE",V.Local.sProperty,V.Local.iIndex.++)
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UMCheck",V.Local.sProperty,V.Local.iIndex.++)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UM",V.Local.sProperty,V.Local.iIndex.++)
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SrcCheck",V.Local.sProperty,V.Local.iIndex.++)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SOURCE",V.Local.sProperty,V.Local.iIndex.++)
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SortCheck",V.Local.sProperty,V.Local.iIndex.++)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SORTCODE",V.Local.sProperty,V.Local.iIndex.++)
+
+V.Local.sProperty.Set("Caption")
+V.Local.sDefault.Set(" ")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARTNO",V.Local.sProperty,"Part Number")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DESCRIPTION",V.Local.sProperty,"Description")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UM",V.Local.sProperty,"UM")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PRODUCTLINE",V.Local.sProperty,"PL")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SOURCE",V.Local.sProperty,"Source")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SORTCODE",V.Local.sProperty,"Sort Code")
+
+V.Local.sProperty.Set("ShowCaption")
+V.Local.sDefault.Set("False")
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PLCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UMCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SrcCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SortCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+
+V.Local.sProperty.Set("MinWidth")
+V.Local.sDefault.Set("30")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARTNO",V.Local.sProperty,120)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DESCRIPTION",V.Local.sProperty,200)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UM",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PRODUCTLINE",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PLCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UMCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SrcCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SOURCE",V.Local.sProperty,50)
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SortCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SORTCODE",V.Local.sProperty,100)
+
+V.Local.sProperty.Set("MaxWidth")
+V.Local.sDefault.Set("30")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UM",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PRODUCTLINE",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PLCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"UMCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SrcCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SortCheck",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+
+V.Local.sProperty.Set("CellHAlignment")
+V.Local.sDefault.Set("Center")
+
+
+V.Local.sProperty.Set("CellForeColor")
+V.Local.sDefault.Set("Blue")
+
+
+V.Local.sProperty.Set("CellFontUnderline")
+V.Local.sDefault.Set("True")
+
+
+V.Local.sProperty.Set("DisplayCustomDateTime")
+V.Local.sDefault.Set("d")
+
+
+V.Local.sProperty.Set("Visible")
+V.Local.sDefault.Set("False")
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"REVISION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"INVPART",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"QUANTITY",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"COST",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DRAWING",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEADTIME",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LEVEL",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"LOCATION",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO1",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MEMO2",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PARENT",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"SEQUENCE",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"TAG",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"CATEGORY",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.If(V.Global.bRouter,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"ROUTER",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bVendor,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"VENDOR_CODE",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_PART_NO",V.Local.sProperty,V.Local.sDefault)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"MFR_NAME",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bExtDesc,=,True)
+	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DescExtra",V.Local.sProperty,V.Local.sDefault)
+F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DiffCheck",V.Local.sProperty,V.Local.sDefault)
+'F.Intrinsic.Control.If(V.Global.bAlt1,=,True)
+'	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"AltDescription1",V.Local.sProperty,V.Local.sDefault)
+'F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.If(V.Global.bAlt2,=,True)
+'	gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"AltDescription",V.Local.sProperty,V.Local.sDefault)
+'F.Intrinsic.Control.EndIf
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"ALTDESCRIPTION1",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"ALTDESCRIPTION2",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DESCEXTRA",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"ISSUEUM",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"CONSUMPTIONCONV",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DISPLAYPART",V.Local.sProperty,V.Local.sDefault)
+gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DISPLAYREV",V.Local.sProperty,V.Local.sDefault)
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"PREFERRED",V.Local.sProperty,V.Local.sDefault)
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"APPROVED",V.Local.sProperty,V.Local.sDefault)
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"CUSTOMER",V.Local.sProperty,V.Local.sDefault)
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"CUSTOMER_PART",V.Local.sProperty,V.Local.sDefault)
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"DEFAULT_BIN",V.Local.sProperty,V.Local.sDefault)
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"VENDOR_SORT",V.Local.sProperty,V.Local.sDefault)
+'gui.fMain.GsGcMain.SetColumnProperty(V.Local.sGv,"BOM_COMMENTS",V.Local.sProperty,V.Local.sDefault)
+
+gui.fMain.GsGcMain.MainView(V.Local.sGv)
+
+F.Intrinsic.UI.CloseWaitDialog
+
+gui.fMain..Show
+Program.Sub.loadfmain.End
+
+Program.Sub.fOptions_UnLoad.Start
+gui.fOptions..Visible(0)
+F.Intrinsic.Control.End
+
+Program.Sub.fOptions_UnLoad.End
+
+Program.Sub.cmdProcess_Click.Start
+V.Local.bDescription.Declare
+V.Local.bPL.Declare
+V.Local.bSource.Declare
+V.Local.bSortCode.Declare
+V.Local.iFor.Declare
+V.Local.iLen.Declare
+V.Local.sGSSPart.Declare
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+
+gui.fMain..Visible(0)
+
+F.Intrinsic.UI.InvokeWaitDialog("Updating Inventory","BOM Compare - ARC 5308 - Ver: 091120201443")
+
+'Check to see if the options are checked for Description, Source, Product Line, and Sort Code
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 5",V.Local.sRet)
+V.Local.bDescription.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 6",V.Local.sRet)
+V.Local.bSource.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 7",V.Local.sRet)
+V.Local.bPL.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 8",V.Local.sRet)
+V.Local.bSortCode.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+
+F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtPreload.Rowcount--,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Updating Inventory",V.Local.iFor,0,V.DataTable.dtPreload.Rowcount--)
+	F.Intrinsic.String.GSSPartString(V.DataTable.dtPreload(V.Local.iFor).PartNo!FieldValTrim,V.DataTable.dtPreload(V.Local.iFor).Revision!FieldValTrim,V.Local.sGSSPart)
+	F.Intrinsic.String.Trim(V.Local.sGSSPart,V.Local.sGSSPart)
+	'Update ProdLine, Unit, Description, Sort Code
+	V.Local.sSQL.Set("update INVENTORY_MSTR set")
+	F.Intrinsic.Control.If(V.Local.bPL,=,True)
+		F.Intrinsic.Control.If(V.DataTable.dtPreload(V.Local.iFor).PLCheck!FieldVal,=,True)
+			F.Intrinsic.String.Concat(V.Local.sSQL," PRODUCT_LINE = '",V.DataTable.dtPreload(V.Local.iFor).ProductLine!FieldValTrim,"',",V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+		'F.Intrinsic.Control.If(V.DataTable.dtPreload(V.Local.iFor).UMCheck!FieldVal,=,True)
+			'F.Intrinsic.String.Concat(V.Local.sSQL," UM_INVENTORY = '",V.DataTable.dtPreload(V.Local.iFor).UM!FieldValTrim,"',",V.Local.sSQL)
+		'F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+		F.Intrinsic.Control.If(V.DataTable.dtPreload(V.Local.iFor).DescCheck!FieldVal,=,True)
+			F.Intrinsic.String.Concat(V.Local.sSQL," DESCRIPTION = '",V.DataTable.dtPreload(V.Local.iFor).Description!FieldValTrim,"',",V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+		F.Intrinsic.Control.If(V.DataTable.dtPreload(V.Local.iFor).SortCheck!FieldVal,=,True)
+			F.Intrinsic.String.Concat(V.Local.sSQL," CODE_SORT = '",V.DataTable.dtPreload(V.Local.iFor).SortCode!FieldValTrim,"'",V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.sSQL.Right3,<>,"set")
+		'Strip out the last comma if necessary
+		F.Intrinsic.Control.If(V.Local.sSQL.Right1,=,",")
+			F.Intrinsic.String.Len(V.Local.sSQL,V.Local.iLen)
+			F.Intrinsic.String.Left(V.Local.sSQL,V.Local.iLen.--,V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Concat(V.Local.sSQL," where PART = '",V.Local.sGSSPart,"'",V.Local.sSQL)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+
+	'Update Source
+	F.Intrinsic.Control.If(V.Local.bSource,=,True)
+		V.Local.sSQL.Set("update INVENTORY_MST2 set")
+		F.Intrinsic.Control.If(V.DataTable.dtPreload(V.Local.iFor).SrcCheck!FieldVal,=,True)
+			F.Intrinsic.String.Concat(V.Local.sSQL," CODE_SOURCE = '",V.DataTable.dtPreload(V.Local.iFor).Source!FieldValTrim,"',",V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sSQL.Right3,<>,"set")
+			'Strip out the last comma if necessary
+			F.Intrinsic.Control.If(V.Local.sSQL.Right1,=,",")
+				F.Intrinsic.String.Len(V.Local.sSQL,V.Local.iLen)
+				F.Intrinsic.String.Left(V.Local.sSQL,V.Local.iLen.--,V.Local.sSQL)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.String.Concat(V.Local.sSQL," where PART = '",V.Local.sGSSPart,"'",V.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'Remove Columns for Product line, Unit of Measure, and Description Checkboxes
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	F.Data.DataTable.RemoveColumn("dtPreload","PLCheck")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	F.Data.DataTable.RemoveColumn("dtPreload","DescCheck")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	F.Data.DataTable.RemoveColumn("dtPreload","SrcCheck")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	F.Data.DataTable.RemoveColumn("dtPreload","SortCheck")
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.RemoveColumn("dtPreload","DiffCheck")
+
+F.Intrinsic.Control.CallSub(savepreloadbdf)
+
+F.Intrinsic.UI.CloseWaitDialog
+
+'Disconnect
+F.Intrinsic.Control.CallSub(disconnect)
+Program.Sub.cmdProcess_Click.End
+
+Program.Sub.chkDefaultBin_Click.Start
+Program.Sub.chkDefaultBin_Click.End
+
+Program.Sub.chkPreviewSC_Click.Start
+Program.Sub.chkPreviewSC_Click.End
+
+Program.Sub.cmdSelectAll_Click.Start
+V.Local.bDescription.Declare
+V.Local.bPL.Declare
+V.Local.bSource.Declare
+V.Local.bSortCode.Declare
+V.Local.iFor.Declare
+V.Local.sRet.Declare
+
+
+gui.fMain..Enabled(0)
+
+'Check to see if the options are checked for Description, Source, Product Line, and Sort Code
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 5",V.Local.sRet)
+V.Local.bDescription.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 6",V.Local.sRet)
+V.Local.bSource.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 7",V.Local.sRet)
+V.Local.bPL.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+F.Data.DataTable.Select("dtOptions","HOOK = 50310 and SEQ = 8",V.Local.sRet)
+V.Local.bSortCode.Set(V.DataTable.dtOptions(V.Local.sRet).BVAL!FieldVal)
+
+'F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.dtPreload.Rowcount--,1)
+'	'Check ProdLine, Unit, Description, Sort Code, and Source
+'	F.Intrinsic.Control.If(V.Global.bSel,=,True)
+'		V.Global.bSel.Set(False)
+'	F.Intrinsic.Control.Else
+'		V.Global.bSel.Set(True)
+'	F.Intrinsic.Control.EndIf
+'	F.Intrinsic.Control.If(V.Local.bPL,=,True)
+'		F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"PLCheck",V.Global.bSel)
+'	F.Intrinsic.Control.EndIf
+
+'	F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+'		F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"DescCheck",V.Global.bSel)
+'	F.Intrinsic.Control.EndIf
+'	
+'	F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+'		F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"SortCheck",V.Global.bSel)
+'	F.Intrinsic.Control.EndIf
+
+'	F.Intrinsic.Control.If(V.Local.bSource,=,True)
+'		F.Data.DataTable.SetValue("dtPreload",V.Local.iFor,"SrcCheck",V.Global.bSel)
+'	F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.Next(V.Local.iFor)
+
+f.Intrinsic.Control.If(v.Screen.fMain!lblSelAll.Text,=,"False")
+	v.Global.bSel.Set(True)
+	gui.fMain.lblSelAll.Text("True")
+f.Intrinsic.Control.else
+	v.Global.bSel.Set(False)
+	gui.fMain.lblSelAll.Text("False")
+f.Intrinsic.Control.EndIf
+
+'Check ProdLine, Unit, Description, Sort Code, and Source
+F.Intrinsic.Control.If(V.Local.bPL,=,True)
+	F.Data.DataTable.SetValue("dtPreload",-1,"PLCheck",V.Global.bSel)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.bDescription,=,True)
+	F.Data.DataTable.SetValue("dtPreload",-1,"DescCheck",V.Global.bSel)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.bSortCode,=,True)
+	F.Data.DataTable.SetValue("dtPreload",-1,"SortCheck",V.Global.bSel)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.bSource,=,True)
+	F.Data.DataTable.SetValue("dtPreload",-1,"SrcCheck",V.Global.bSel)
+F.Intrinsic.Control.EndIf
+
+gui.fMain..Enabled(1)
+Program.Sub.cmdSelectAll_Click.End
+
+Program.Sub.CheckLongPart.Start
+	' System Support > Administration > Company Options (Advanced) > Inventory
+	'	At the bottom, either Use Long Part (Large Inventory) or Use Long Part (Small Inventory)
+	F.Global.General.ReadOption("400861",0,False,"0000",V.Global.bLongPart)
+	F.Intrinsic.Control.If(V.Global.bLongPart,=,False)
+		F.Global.General.ReadOption("400861",0,False,"0004",V.Global.bLongPart)
+	F.Intrinsic.Control.EndIf
+	
+	F.Global.General.ReadOption("400861",0,False,"0001",V.Global.bLongMfgXref)
+Program.Sub.CheckLongPart.End
+
+Program.Sub.checkTable.Start
+v.local.bExist.Declare
+
+Function.ODBC.Connection!conx.TableExists("GCG_6983_PART_SUFFIX",v.Local.bExist)
+f.Intrinsic.Control.If(v.Local.bExist.Not)
+f.ODBC.Connection!conx.Execute("CREATE TABLE GCG_6983_PART_SUFFIX(PART CHAR(14),SUFFIX CHAR(2));")
+f.Intrinsic.Control.EndIf
+Program.Sub.checkTable.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$JWERTH$}$11/9/2018 10:31:57 AM$}$False
+${$5$}$2.0.0.0$}$2
+${$6$}$gmansur$}$20230410092505714$}$K/sEmFVXhafX7mOm1w0TdKIbTZlXvIA31uibLNqqayJoBSdpzzkXj9j0I1T0s6SeRuG36RJsgNg=
+Program.Sub.Comments.End
